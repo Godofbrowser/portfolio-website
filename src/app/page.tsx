@@ -10,7 +10,7 @@ export default function Home() {
   
   return (
     <>
-      <header className=" border-b-2">
+      {process.env.APP_ENV === 'development' ? (<header className=" border-b-2">
         <div className="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4">
           <DarkModeBtn />
           <nav className="ml-auto">
@@ -30,7 +30,7 @@ export default function Home() {
             </ul>
           </nav>
         </div>
-      </header>
+      </header>) : null}
       <main className="">
         <LandingIntro />
       </main>

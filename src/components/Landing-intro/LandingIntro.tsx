@@ -9,7 +9,7 @@ const LandingIntro = () => {
     const { person, platformLinks } = useAppData()
 
      return (
-       <div className="md:flex min-h-[600px] py-24 md:justify-center md:items-center border-b-2 bg-[url('/images/spiral-bg-light.png')] bg-center bg-cover bg-no-repeat">
+       <div className="md:flex min-h-screen py-24 md:justify-center md:items-center border-b-2 bg-[url('/images/spiral-bg-light.png')] bg-center bg-cover bg-no-repeat">
          {/* background section */}
          <div className="grid grid-cols-1 gap-6 md:grid-cols-[3fr_9fr] md:gap-12 px-6">
            <div className="overflow-hidden rounded-full size-44 relative *:translate-y-[-60%] *:absolute *:top-[50%]">
