@@ -1,8 +1,9 @@
+import { AppIcon } from '@/components/ui/AppIcon';
 import { Link2 } from 'lucide-react';
 
 
 export const useAppData = () => {
-    const hideIncomplete = process.env.APP_ENV !== 'development'
+    const disableHeaderNavigations = true
     const appTitle = 'Portfolio'
     const person = {
       userFullName: "Emeke Ajeh",
@@ -12,9 +13,10 @@ export const useAppData = () => {
     
 
     const platformLinks = [
-      { link: "", label: "Github", icon: Link2 },
-      { link: "", label: "LinkedIn", icon: Link2 },
-      { link: "", label: "StackOverflow", icon: Link2 },
+      { link: "", label: "LinkedIn", icon: [AppIcon, {name: 'linked-in'}] },
+      { link: "", label: "Github", icon: [AppIcon, {name: 'github'}] },
+      { link: "", label: "StackOverflow", icon: [AppIcon, {name: 'stack-overflow'}] },
+      { link: "", label: "Upwork", icon: [AppIcon, {name: 'upwork'}] },
     ];
 
     const navLinks = [
@@ -24,5 +26,5 @@ export const useAppData = () => {
         { label: 'Contact', link: ''},
     ]
 
-    return { appTitle, person, platformLinks, navLinks, hideIncomplete };
+    return { appTitle, person, platformLinks, navLinks, disableHeaderNavigations };
 }
