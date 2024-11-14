@@ -2,6 +2,8 @@ import { Link2 } from 'lucide-react';
 
 
 export const useAppData = () => {
+    const hideIncomplete = process.env.APP_ENV !== 'development'
+    const appTitle = 'Portfolio'
     const person = {
       userFullName: "Emeke Ajeh",
       userPhoto: "/images/ajeh-emeke.jpg",
@@ -22,5 +24,5 @@ export const useAppData = () => {
         { label: 'Contact', link: ''},
     ]
 
-    return { person, platformLinks, navLinks };
+    return { appTitle, person, platformLinks, navLinks, hideIncomplete };
 }

@@ -1,12 +1,12 @@
 import { Moon } from "lucide-react"
 
 export interface DarkModeBtnProps {
-
+    className: any;
 }
 
-const DarkModeBtn = () => {
+const DarkModeBtn = ({ className }: DarkModeBtnProps) => {
     return (
-        <button> 
+        <button className={className}> 
             <Moon size={28} />
         </button>
     )
