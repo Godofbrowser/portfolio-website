@@ -49,9 +49,6 @@ export default function Home() {
       <main className="">
         <LandingIntro />
         <ProjectsSection />
-        <div className="h-[100px]">
-          <a href="/test" className="hover:text-green-600">Click here</a>
-        </div>
         <div className="h-[800px]"></div>
       </main>
     </>

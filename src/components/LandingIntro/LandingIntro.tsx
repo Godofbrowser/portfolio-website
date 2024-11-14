@@ -5,7 +5,7 @@ import { person, platformLinks } from '../../lib/constants'
 
 const LandingIntro = () => {
      return (
-       <div className="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
+       <section className="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
          {/* background section */}
          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/spiral-bg-light.png')] bg-cover bg-no-repeat bg-fixed [background-position:50%_center] dark:opacity-15"></div>
          <div className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[3fr_9fr] max-md:pt-20 md:gap-12 px-6">
@@ -28,7 +28,7 @@ const LandingIntro = () => {
              <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{ person.userHeadline }</p>
            </div>
          </div>
-       </div>
+       </section>
      );
 }
 
