@@ -35,7 +35,7 @@ export default function Home() {
             <nav className="ml-auto">
               <ul className="*:inline-block">
                 {navLinks.map((nl) => (
-                  <li>
+                  <li key={nl.label}>
                     <Button variant="ghost" asChild>
                       <Link href={nl.link}>{nl.label}</Link>
                     </Button>
