@@ -19,7 +19,7 @@ const LandingIntro = () => {
                {platformLinks.map((pl) => (
                  <li key={pl.label} className="first:ml-0">
                    <Link href={pl.link}>
-                     {createElement(pl.icon[0], { className: 'size-6', ...pl.icon[1] })}
+                     {createElement(pl.icon[0] as any, { className: 'size-6', ...pl.icon[1] })}
                    </Link>
                  </li>
                ))}

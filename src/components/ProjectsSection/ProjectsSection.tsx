@@ -13,6 +13,9 @@ const ProjectsSection = () => {
 
           <div>
             <AppButtonGroup options={options} />
+            <div>
+                {/* project item card */}
+            </div>
           </div>
         </div>
       </section>
