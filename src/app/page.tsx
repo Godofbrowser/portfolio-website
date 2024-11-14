@@ -2,37 +2,36 @@ import { Button } from "@/components/ui/button";
 import { DarkModeBtn } from "@/components/DarkModeBtn";
 import { LandingIntro } from "@/components/Landing-intro/LandingIntro";
 import { useAppData } from "@/hooks/useAppData";
+import Link from "../../node_modules/next/link";
 
 
 
 export default function Home() {
-  const { person, platformLinks, navLinks } = useAppData()
+  const { navLinks } = useAppData()
   
   return (
     <>
-      {process.env.APP_ENV === 'development' ? (<header className=" border-b-2">
+      <header className="fixed top-0 left-0 w-full z-[1000] bg-white shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]">
         <div className="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4">
           <DarkModeBtn />
           <nav className="ml-auto">
             <ul className="*:inline-block">
-              <li>
-                <Button variant="ghost">Expertise</Button>
-              </li>
-              <li>
-                <Button variant="ghost">History</Button>
-              </li>
-              <li>
-                <Button variant="ghost">Projects</Button>
-              </li>
-              <li>
-                <Button variant="ghost">Contact</Button>
-              </li>
+              {navLinks.map(nl => (
+                 <li>
+                    <Button variant="ghost" asChild>
+                      <Link href={nl.link}>
+                        {nl.label}
+                      </Link>
+                    </Button>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
-      </header>) : null}
+      </header>
       <main className="">
         <LandingIntro />
+        <div className="h-[800px]"></div>
       </main>
     </>
   );

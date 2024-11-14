@@ -16,11 +16,10 @@ export const useAppData = () => {
     ];
 
     const navLinks = [
-        { label: '', link: ''},
-        { label: '', link: ''},
-        { label: '', link: ''},
-        { label: '', link: ''},
-        { label: '', link: ''},
+        { label: 'Expertise', link: ''},
+        { label: 'History', link: ''},
+        { label: 'Projects', link: ''},
+        { label: 'Contact', link: ''},
     ]
 
     return { person, platformLinks, navLinks };
