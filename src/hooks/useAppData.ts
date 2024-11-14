@@ -5,6 +5,7 @@ import { Link2 } from 'lucide-react';
 export const useAppData = () => {
     const disableHeaderNavigations = true
     const appTitle = 'Portfolio'
+    const appDescription = 'Full-stack software engineer specializing in web and mobile applications. I build scalable, user-focused solutions with strong front-end and back-end expertise. Passionate about creating seamless, high-performance applications that bring ideas to life with precision and innovation.'
     const person = {
       userFullName: "Emeke Ajeh",
       userPhoto: "/images/ajeh-emeke.jpg",
@@ -26,5 +27,5 @@ export const useAppData = () => {
         { label: 'Contact', link: ''},
     ]
 
-    return { appTitle, person, platformLinks, navLinks, disableHeaderNavigations };
+    return { appTitle, appDescription, person, platformLinks, navLinks, disableHeaderNavigations };
 }

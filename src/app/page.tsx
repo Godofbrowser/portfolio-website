@@ -1,11 +1,27 @@
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
 import { DarkModeBtn } from "@/components/DarkModeBtn";
 import { LandingIntro } from "@/components/Landing-intro/LandingIntro";
 import { useAppData } from "@/hooks/useAppData";
-import Link from "../../node_modules/next/link";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 
+ 
+export async function generateMetadata(props: unknown, parent: ResolvingMetadata): Promise<Metadata> {
+  const {appTitle, appDescription, person} = useAppData()
+
+  return {
+    title: `${appTitle} - ${person.userFullName}`,
+    description: appDescription,
+    openGraph: {
+      images: ['/images/prodile-card.png'],
+    },
+    twitter: {
+      images: ['/images/prodile-card-700x700.png'],
+    },
+  }
+}
 
 export default function Home() {
   const { disableHeaderNavigations, appTitle, navLinks } = useAppData()
