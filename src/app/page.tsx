@@ -1,15 +1,15 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
 import { DarkModeBtn } from "@/components/DarkModeBtn";
-import { LandingIntro } from "@/components/Landing-intro/LandingIntro";
-import { useAppData } from "@/hooks/useAppData";
+import { LandingIntro } from "@/components/LandingIntro/LandingIntro";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { ProjectsSection } from '@/components/ProjectsSection/ProjectsSection';
+import { appDescription, person, disableHeaderNavigations, appTitle, navLinks } from '../lib/constants'
 
 
  
 export async function generateMetadata(props: unknown, parent: ResolvingMetadata): Promise<Metadata> {
-  const {appTitle, appDescription, person} = useAppData()
 
   return {
     title: `${appTitle} - ${person.userFullName}`,
@@ -24,7 +24,6 @@ export async function generateMetadata(props: unknown, parent: ResolvingMetadata
 }
 
 export default function Home() {
-  const { disableHeaderNavigations, appTitle, navLinks } = useAppData()
   
   return (
     <>
@@ -49,6 +48,7 @@ export default function Home() {
       </header>
       <main className="">
         <LandingIntro />
+        <ProjectsSection />
         <div className="h-[100px]">
           <a href="/test" className="hover:text-green-600">Click here</a>
         </div>

@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { createElement } from "react";
-import { useAppData } from "@/hooks/useAppData";
-import {AppIcon} from "@/components/ui/AppIcon";
+import { person, platformLinks } from '../../lib/constants'
 
 const LandingIntro = () => {
-    const { person, platformLinks } = useAppData()
-
      return (
        <div className="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
          {/* background section */}
