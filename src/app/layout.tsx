@@ -10,7 +10,6 @@ const hasGoneLive = false
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 export const metadata: Metadata = {
   // metadataBase: new URL(appUrl),
-  metadataBase: appUrl,
   authors: [{ name: 'Emeke Ajeh', url: 'https://github.com/Godofbrowser' }],
   
   robots: {
