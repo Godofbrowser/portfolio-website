@@ -1,5 +1,7 @@
 "use client"
 
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 import { Button } from "./button";
 
   interface AppButtonGroupProps {
@@ -7,11 +9,13 @@ import { Button } from "./button";
   }
   
   const AppButtonGroup = (props: AppButtonGroupProps) => {
+    const [active, setActive] = useState('all')
+
     return (
       <div className="grid gap-0.5 grid-cols-3 border-slate-700 border rounded-lg p-0.5 max-w-[600px]">
-        <Button variant="ghost" className="bg-accent">All</Button>
-        <Button variant="ghost">Live</Button>
-        <Button variant="ghost">Open Source</Button>
+        <Button onClick={() => setActive('all')} className={cn({'bg-accent': active === 'all'})} variant="ghost">All</Button>
+        <Button onClick={() => setActive('live')} className={cn({'bg-accent': active === 'live'})} variant="ghost">Live</Button>
+        <Button onClick={() => setActive('oss')} className={cn({'bg-accent': active === 'oss'})} variant="ghost">Open Source</Button>
       </div>
     )
   }

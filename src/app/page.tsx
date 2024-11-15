@@ -49,7 +49,24 @@ export default function Home() {
       <main className="">
         <LandingIntro />
         <ProjectsSection />
-        <div className="h-[800px]"></div>
+        <div className="h-[800px] container px-4 mx-auto">
+          
+            <ul>
+              <li>
+                Netlify: { process.env.NETLIFY }
+              </li>
+              <li>
+                Netlify deploy URL: { process.env.URL }
+              </li>
+              <li>
+                Netlify deploy CONTEXT: { process.env.CONTEXT }
+              </li>
+              <li>
+                Netlify deploy BRANCH: { process.env.BRANCH }
+              </li>
+            </ul>
+          
+        </div>
       </main>
     </>
   );

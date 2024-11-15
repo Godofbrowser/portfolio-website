@@ -2,7 +2,8 @@ import { AppIcon } from "@/components/ui/AppIcon";
 
 export const disableHeaderNavigations = true
 export const appTitle = 'Portfolio'
-export const appDescription = 'Full-stack software engineer specializing in web and mobile applications. I build scalable, user-focused solutions with strong front-end and back-end expertise. Passionate about creating seamless, high-performance applications that bring ideas to life with precision and innovation.'
+export const appUrl: string = (process.env.NETLIFY ? process.env.URL : process.env.APP_URL) || ''
+export const appDescription = 'Full-stack software engineer specializing in web and mobile applications. I build scalable, user-focused solutions with strong front-end and back-end expertise'
 export const person = {
   userFullName: "Emeke Ajeh",
   userPhoto: "/images/ajeh-emeke.jpg",
