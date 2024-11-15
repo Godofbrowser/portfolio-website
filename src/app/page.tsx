@@ -15,10 +15,10 @@ export async function generateMetadata(props: unknown, parent: ResolvingMetadata
     title: `${appTitle} - ${person.userFullName}`,
     description: appDescription,
     openGraph: {
-      images: ['/images/prodile-card.png'],
+      images: ['/images/profile-card.png'],
     },
     twitter: {
-      images: ['/images/prodile-card-700x700.png'],
+      images: ['/images/profile-card-700x700.png'],
     },
   }
 }
