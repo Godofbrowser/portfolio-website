@@ -5,23 +5,8 @@ import { LandingIntro } from "@/components/LandingIntro/LandingIntro";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ProjectsSection } from '@/components/ProjectsSection/ProjectsSection';
-import { appDescription, person, disableHeaderNavigations, appTitle, navLinks } from '../lib/constants'
+import { disableHeaderNavigations, appTitle, navLinks, appUrl } from '../lib/constants'
 
-
- 
-export async function generateMetadata(props: unknown, parent: ResolvingMetadata): Promise<Metadata> {
-
-  return {
-    title: `${appTitle} - ${person.userFullName}`,
-    description: appDescription,
-    openGraph: {
-      images: ['/images/profile-card.png'],
-    },
-    twitter: {
-      images: ['/images/profile-card-700x700.png'],
-    },
-  }
-}
 
 export default function Home() {
   
@@ -52,6 +37,9 @@ export default function Home() {
         <div className="h-[800px] container px-4 mx-auto">
           
             <ul>
+              <li>
+                App URL: { appUrl }
+              </li>
               <li>
                 Netlify: { process.env.NETLIFY }
               </li>
