@@ -14,8 +14,12 @@ export default function Home() {
     <>
       <header className="fixed top-0 left-0 w-full z-[1000] bg-background dark:bg-background shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]">
         <div className="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4">
-          {!disableHeaderNavigations ? null : (<h1 className="text-xl font-semibold">{appTitle}</h1>)}
-          <DarkModeBtn className={cn({ 'ml-auto': disableHeaderNavigations })} />
+          {!disableHeaderNavigations ? null : (
+            <h1 className="text-xl font-semibold">{appTitle}</h1>
+          )}
+          <DarkModeBtn
+            className={cn({ "ml-auto": disableHeaderNavigations })}
+          />
           {disableHeaderNavigations ? null : (
             <nav className="ml-auto">
               <ul className="*:inline-block">
@@ -34,26 +38,15 @@ export default function Home() {
       <main className="">
         <LandingIntro />
         <ProjectsSection />
+
         <div className="h-[800px] container px-4 mx-auto">
-          
-            <ul>
-              <li>
-                App URL: { appUrl }
-              </li>
-              <li>
-                Netlify: { process.env.NETLIFY }
-              </li>
-              <li>
-                Netlify deploy URL: { process.env.URL }
-              </li>
-              <li>
-                Netlify deploy CONTEXT: { process.env.CONTEXT }
-              </li>
-              <li>
-                Netlify deploy BRANCH: { process.env.BRANCH }
-              </li>
-            </ul>
-          
+          <ul>
+            <li>App URL: {appUrl}</li>
+            <li>Netlify: {process.env.NETLIFY}</li>
+            <li>Netlify deploy URL: {process.env.URL}</li>
+            <li>Netlify deploy CONTEXT: {process.env.CONTEXT}</li>
+            <li>Netlify deploy BRANCH: {process.env.BRANCH}</li>
+          </ul>
         </div>
       </main>
     </>
