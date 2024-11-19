@@ -75,7 +75,7 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
               )}
 
               <Button variant="ghost" size="sm" className="ml-auto">
-                More Details
+                Details & Role
               </Button>
             </div>
           </div>
