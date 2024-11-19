@@ -74,7 +74,7 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   }
 
   .highlighted-text {
-    @apply inline-block before:[content:'['] after:[content:']'] before:text-accent after:text-accent before:inline-block before:text-[1.1em] before:align-bottom;
+    @apply inline-block before:[content:'['] after:[content:']'] before:text-accent after:text-accent before:inline-block before:text-[1.1em] after:text-[1.1em] before:align-bottom;
   }
 
   .highlighted-heading {
