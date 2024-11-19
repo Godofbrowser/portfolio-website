@@ -1,6 +1,6 @@
 "use client";
 
-import { IProject } from "@/interfaces/project.interface";
+import { IProject, IProjectTabValue } from "@/interfaces/project.interface";
 import { appUrl, projects } from "@/lib/constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -13,15 +13,15 @@ import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 
 const ProjectsSection = () => {
-    const options = [
+    const options: {label: string; value: IProjectTabValue}[] = [
         {label: 'All Projects', value: 'all'},
         {label: 'Has Demo', value: 'live'},
         {label: 'Open Source', value: 'oss'},
     ]
-    const [activeTab, setActiveTab] = useState(options[0].value)
+    const [activeTab, setActiveTab] = useState<IProjectTabValue>(options[0].value)
     const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
-    const tabChangeHandler = (value: string) => {
+    const tabChangeHandler = (value: IProjectTabValue) => {
       setActiveTab(value);
     }
 
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
             {/* <AppButtonGroup options={options} className="mx-auto mb-8" /> */}
             <Tabs
               defaultValue={activeTab}
-              onValueChange={tabChangeHandler}
+              onValueChange={($event: any) => tabChangeHandler($event)}
               className="max-w-3xl mx-auto mb-8"
             >
               <TabsList className="grid w-full grid-cols-3">

@@ -22,7 +22,7 @@ interface ProjectModalProps {
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   return (
-    <Dialog open={isOpen} onOpenChange={onClose} className="z-[99999]">
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="w-[calc(100vw-16px)] h-[calc(100vh-120px)] overflow-y-auto border-none md:max-w-3xl md:max-h-[90vh]">
         <DialogHeader>
           <DialogTitle className="text-2xl">{project.title}</DialogTitle>
@@ -92,7 +92,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           <div className="flex gap-4">
             {!project.links.demo && !project.links.reference ? null : (
               <Button asChild>
-                <Link href={project.links.demo ?? project.links.reference} target="_blank">
+                <Link href={project.links.demo ?? project.links.reference ?? ''} target="_blank">
                   <ExternalLink className="mr-2 h-4 w-4" />
                   {project.links.demo ? 'Live Demo' : 'Reference'}
                 </Link>

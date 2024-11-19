@@ -6,7 +6,7 @@ interface IProjectImage {
 
 export interface IProject {
   title: string;
-  tags: ('live' | 'oss')[];
+  tags: Omit<IProjectTabValue, 'all'>[];
   tech: string[];
   features: string[];
   description: string;
@@ -22,3 +22,5 @@ export interface IProject {
     reference: string;
   }
 }
+
+export type IProjectTabValue = 'all' | 'live' | 'oss';

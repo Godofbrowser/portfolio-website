@@ -64,7 +64,7 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
               {!project.links.demo && !project.links.reference ? null : (
                 <Button variant="outline" size="sm" asChild>
                   <Link
-                    href={project.links.demo ?? project.links.reference}
+                    href={project.links.demo ?? project.links.reference ?? ''}
                     target="_blank"
                     onClick={(e) => e.stopPropagation()}
                   >
