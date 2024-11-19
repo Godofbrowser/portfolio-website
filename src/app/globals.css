@@ -70,11 +70,6 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
 
 @layer components {
   * {
-    @apply transition ease-in-out duration-300 motion-reduce:transition-none;
-  }
-  a:hover {
-    @apply text-accent;
+    @apply transition ease-in-out duration-200 motion-reduce:transition-none;
   }
 }
-
-

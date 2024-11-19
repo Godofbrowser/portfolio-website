@@ -9,8 +9,8 @@ const LandingIntro = () => {
          {/* background section */}
          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/spiral-bg-light.png')] bg-cover bg-no-repeat bg-fixed [background-position:50%_center] dark:opacity-15"></div>
          <div className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[3fr_9fr] max-md:pt-20 md:gap-12 px-6">
-           <div className="overflow-hidden rounded-full size-32 md:size-44 relative *:translate-y-[-60%] *:absolute *:top-[50%] shadow-md">
-             <Image width={1706} height={2298} src={person.userPhoto} alt={person.userFullName} />
+           <div className="overflow-hidden rounded-full size-32 md:size-44 shadow-md">
+             <Image width={640} height={640} src={person.userPhoto} alt={person.userFullName} />
            </div>
            <div className="max-md:grid max-md:[grid-template-areas:'name'_'headline'_'links']">
              {/* main section */}
@@ -18,7 +18,7 @@ const LandingIntro = () => {
                {/* Links */}
                {platformLinks.map((pl) => (
                  <li key={pl.label} className="first:ml-0">
-                   <Link href={pl.link}>
+                   <Link href={pl.link} className="hover:text-accent">
                      {createElement(pl.icon[0] as any, { className: 'size-6', ...pl.icon[1] })}
                    </Link>
                  </li>

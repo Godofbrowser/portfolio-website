@@ -61,6 +61,10 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      textUnderlineOffset: {
+        5: '5px',
+        6: '6px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

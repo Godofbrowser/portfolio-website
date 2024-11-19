@@ -44,9 +44,9 @@ export const metadata: Metadata = {
         alt: person.userFullName,
       },
       {
-        url: `${appUrl}/images/profile-card.png`, // Must be an absolute URL
-        width: 738,
-        height: 302,
+        url: `${appUrl}/images/profile-card-1280x640.png`, // Must be an absolute URL
+        width: 1280,
+        height: 640,
         alt: person.userFullName,
       },
     ],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     // siteId: '1467726470533754880',
     creator: '@godofbrowser',
     // creatorId: '1467726470533754880',
-    images: [`${appUrl}/images/profile-card-700x700.png`], // Must be an absolute URL
+    images: [`${appUrl}/images/profile-card-1280x640.png`], // Must be an absolute URL
   },
 };
 
@@ -69,8 +69,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <ThemeProvider defaultTheme="dark">
           {children}
         </ThemeProvider>

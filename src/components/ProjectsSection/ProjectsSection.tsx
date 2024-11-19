@@ -1,23 +1,84 @@
+"use client";
+
+import { IProject } from "@/interfaces/project.interface";
+import { appUrl, projects } from "@/lib/constants";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useMemo, useState } from "react";
+import { ProjectCardItem } from "../ProjectCardItem/ProjectCardItem";
+import { ProjectModal } from "../ProjectModal/project-modal";
 import { AppButtonGroup } from "../ui/AppButtonGroup"
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
+
+
 
 const ProjectsSection = () => {
     const options = [
         {label: 'All Projects', value: 'all'},
-        {label: 'Live Projects', value: 'live'},
-        {label: 'Personal Projects', value: 'personal'},
+        {label: 'Has Demo', value: 'live'},
+        {label: 'Open Source', value: 'oss'},
     ]
+    const [activeTab, setActiveTab] = useState(options[0].value)
+    const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
+
+    const tabChangeHandler = (value: string) => {
+      setActiveTab(value);
+    }
+
+    const filteredProjects = useMemo(() => {
+      if (activeTab === options[0].value) return projects
+      return projects.filter(p => p.tags.includes(activeTab))
+    }, [activeTab])
+
     return (
-      <section className="py-16">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-4xl my-6">Projects</h2>
+      <section id="projects" className="py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="container px-4 mx-auto transition-none"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
 
           <div>
-            <AppButtonGroup options={options} />
-            <div>
-                {/* project item card */}
+            {/* <AppButtonGroup options={options} className="mx-auto mb-8" /> */}
+            <Tabs
+              defaultValue={activeTab}
+              onValueChange={tabChangeHandler}
+              className="max-w-3xl mx-auto mb-8"
+            >
+              <TabsList className="grid w-full grid-cols-3">
+                {options.map(({ label, value }) => (
+                  <TabsTrigger key={value} value={value} className="capitalize">
+                    {label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+              {filteredProjects.map((project: IProject, index: number) => (
+                <motion.div
+                  key={`${activeTab}-${project.title}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="transition-none"
+                >
+                  <ProjectCardItem project={project} onClick={() => setSelectedProject(project)} />
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              isOpen={!!selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
       </section>
     );
 }

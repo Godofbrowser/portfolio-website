@@ -1,8 +1,9 @@
 "use client"
 
+import { ClientComponent } from "@/containers/ClientComponent";
 import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
-import { Moon, Sun } from "lucide-react"
+import { AppIcon } from "./ui/AppIcon";
 
 export interface DarkModeBtnProps {
     className?: string;
@@ -11,9 +12,11 @@ export interface DarkModeBtnProps {
 const DarkModeBtn = ({ className }: DarkModeBtnProps) => {
     const { theme, setTheme } = useTheme()
     return (
-        <button className={cn(className || '', 'hover:text-accent')} onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}> 
-            { theme === 'dark' ? <Sun size={28} /> : <Moon size={28} /> }
-        </button>
+        <ClientComponent>
+            <button className={cn(className || '', 'hover:text-accent')} onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}> 
+                { <AppIcon className="size-7" name={theme === 'dark' ? 'sun' : "moon"} /> }
+            </button>
+        </ClientComponent>
     )
 }
 
