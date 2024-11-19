@@ -59,7 +59,7 @@ export default function Home() {
           <div className="container px-4 mx-auto p-3 py-16 relative before:top-0 before:left-[15px] before:absolute before:w-[calc(100%-30px)] before:h-px before:bg-slate-300">
             <p className='max-md:text-center leading-loose'>
               Copyright &copy; 2024<span> - </span>
-              <a href="https://github.com/Godofbrowser"><span className='text-accent'>[</span>godofbrowser<span className='text-accent'>]</span></a> <span className='max-md:hidden'>|</span> <span className="whitespace-nowrap">Don&apos;t hesitate to reach out.</span>
+              <a href="https://github.com/Godofbrowser"><span className='highlighted-text'>godofbrowser</span></a> <span className='max-md:hidden'>|</span> <span className="whitespace-nowrap">Don&apos;t hesitate to reach out.</span>
             </p>
           </div>
         </footer>

@@ -38,10 +38,12 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="container px-4 mx-auto transition-none"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+          <div className="text-center">
+
+          <h2 className="highlighted-heading text-3xl font-bold mb-8">Featured Projects</h2>
+          </div>
 
           <div>
-            {/* <AppButtonGroup options={options} className="mx-auto mb-8" /> */}
             <Tabs
               defaultValue={activeTab}
               onValueChange={($event: any) => tabChangeHandler($event)}

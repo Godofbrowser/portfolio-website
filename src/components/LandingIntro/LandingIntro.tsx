@@ -24,7 +24,7 @@ const LandingIntro = () => {
                  </li>
                ))}
              </ul>
-             <h1 className="text-5xl sm:text-6xl md:text-7xl md:mt-6 font-bold leading-relaxed [grid-area:name]">{ person.userFullName }</h1>
+             <h1 className="text-5xl sm:text-6xl md:text-7xl md:mt-6 font-bold leading-relaxed [grid-area:name] highlighted-text">{ person.userFullName }</h1>
              <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{ person.userHeadline }</p>
            </div>
          </div>

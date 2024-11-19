@@ -72,4 +72,12 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   * {
     @apply transition ease-in-out duration-200 motion-reduce:transition-none;
   }
+
+  .highlighted-text {
+    @apply inline-block before:[content:'['] after:[content:']'] before:text-accent after:text-accent before:inline-block before:text-[1.1em] before:align-bottom;
+  }
+
+  .highlighted-heading {
+    @apply inline-block relative before:absolute before:[content:'_'] before:bg-accent before:inline-block before:h-1 before:w-2/3 before:-bottom-2 before:left-1/2 before:-translate-x-1/2;
+  }
 }

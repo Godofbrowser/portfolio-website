@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "../components/ui/card";
-import { Code2, Server, Palette } from "lucide-react";
+import { Code2, Server, Rocket } from "lucide-react";
 import { person } from "@/lib/constants";
 
 export function About() {
@@ -11,19 +11,18 @@ export function About() {
       icon: <Code2 className="h-6 w-6" />,
       title: "Frontend Development",
       description:
-        "Building responsive and interactive user interfaces using React, Next.js, and modern CSS frameworks.",
+        "Building cross-browser, cross-platform, responsive and interactive user interfaces using Javascript, Typescript, SCSS and modern CSS frameworks.",
     },
     {
       icon: <Server className="h-6 w-6" />,
       title: "Backend Development",
       description:
-        "Creating scalable server-side applications with Node.js, Express, and various databases.",
+        "Creating scalable server-side applications with Node.js (NestJs), PHP (Laravel), serverless functions, and various relational and non-relational databases.",
     },
     {
-      icon: <Palette className="h-6 w-6" />,
-      title: "UI/UX Design/ Mobile",
-      description:
-        "Designing intuitive and beautiful user experiences with attention to detail and accessibility.",
+      icon: <Rocket className="h-6 w-6" />,
+      title: "DevOps",
+      description: "Ensuring scalable and reliable infrastructure through CI/CD pipelines, infrastructure automation, and cloud deployment using modern DevOps tools.",
     },
   ];
 
@@ -37,7 +36,7 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 transition-none"
         >
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <h2 className="highlighted-heading text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {person.about}
           </p>

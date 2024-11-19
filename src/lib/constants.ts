@@ -32,7 +32,7 @@ export const navLinks = [
 const imageBase = ''
 export const projects: IProject[] = [
   {
-    title: 'KittieFightsLive',
+    title: 'KittieFight',
     tags: [],
     tech: ["React", "Web3", "Truffle", "Ganache", "Solidity"],
     links: {
@@ -55,7 +55,7 @@ export const projects: IProject[] = [
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-papper.png`,
+        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-paper.png`,
         width: 1472,
         height: 900,
       },
