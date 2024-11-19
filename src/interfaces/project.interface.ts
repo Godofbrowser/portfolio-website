@@ -14,9 +14,11 @@ export interface IProject {
   images: IProjectImage[];
   links: {
     code?: string;
-  } & ({
     demo: string;
+    reference?: string;
   } | {
+    code?: string;
+    demo?: string;
     reference: string;
-  })
+  }
 }
