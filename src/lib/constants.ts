@@ -171,15 +171,15 @@ export const projects: IProject[] = [
       demo: "https://godofbrowser.github.io/vuejs-dialog/features.html",
     },
     features: [
-      "Lorem Ipsum responsive UIs",
-      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews",
-      "Integration with Ipsum for managing lorem text generation and interactions",
-      "Reliable processing of placeholder strings and dynamic text updates in the system"
+      "Intuitive UI: Features a beautiful and user-friendly interface for seamless interaction",
+      "Multiple Dialog Types: Includes support for alert, confirm, and prompt dialogs with additional confirm types to prevent accidental confirmations",
+      "Customizable and Extendable: Offers a simple API with extensive options for customization and extendability",
+      "Entry and Exit Animations: Allows users to choose preferred animations for a polished and modern experience",
+      "Lightweight Design: Optimized for minimal impact on performance, ensuring smooth integration into Vue.js applications",
   ],  
     description:
-      "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
-    role: "",
+      "Vuejs-dialog is a vue plugin that's designed to serve as a replacement to the native confirm and alert that ships with the browser. It is lightweight and comes with a simple API",
+    role: "I designed and developed the Vuejs-Dialog plugin from the ground up, creating a lightweight and highly customizable solution to replace native browser confirm and alert dialogs. I implemented an intuitive user interface, multiple dialog types such as alert, confirm, and prompt, and additional confirm types to enhance user decision-making. I also designed the plugin to be extendable, with a simple API and support for customizable entry and exit animations, ensuring seamless integration and flexibility for developers. My work focused on delivering a modern, efficient, and versatile plugin for the Vue.js ecosystem",
     images: [
       {
         url: `${imageBase}/images/portfolio/vuejs-dialog/preview.png`,
