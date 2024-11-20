@@ -116,6 +116,40 @@ export const projects: IProject[] = [
         height: 0,
       },
     ]
+  },{
+    ...(projectPlaceholder as IProject),
+    title: "Nursa",
+    tags: ['live'],
+    tech: ["Angular", "Ionic", "Ngxs", "Typescript", "Nodejs", "Firebase"],
+    links: {
+      demo: "https://app.nursa.com/",
+    },
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview1.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview2.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview3.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview4.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+    ],
   },
   {
     title: "Vuejs-Dialog Plugin",
@@ -250,40 +284,6 @@ export const projects: IProject[] = [
       },
       {
         url: `${imageBase}/images/portfolio/givvable/preview4.png`,
-        bgColor: '#0d1116',
-        width: 0,
-        height: 0,
-      },
-    ],
-  },{
-    ...(projectPlaceholder as IProject),
-    title: "Nursa",
-    tags: ['live'],
-    tech: ["Angular", "Ionic", "Ngxs", "Typescript", "Nodejs", "Firebase"],
-    links: {
-      reference: "/",
-    },
-    images: [
-      {
-        url: `${imageBase}/images/portfolio/nursa/preview1.png`,
-        bgColor: '#0d1116',
-        width: 0,
-        height: 0,
-      },
-      {
-        url: `${imageBase}/images/portfolio/nursa/preview2.png`,
-        bgColor: '#0d1116',
-        width: 0,
-        height: 0,
-      },
-      {
-        url: `${imageBase}/images/portfolio/nursa/preview3.png`,
-        bgColor: '#0d1116',
-        width: 0,
-        height: 0,
-      },
-      {
-        url: `${imageBase}/images/portfolio/nursa/preview4.png`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
