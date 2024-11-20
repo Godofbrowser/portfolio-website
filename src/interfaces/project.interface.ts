@@ -2,11 +2,12 @@ interface IProjectImage {
   url: string;
   width: number;
   height: number;
+  bgColor?: string;
 }
 
 export interface IProject {
   title: string;
-  tags: Omit<IProjectTabValue, 'all'>[];
+  tags: IProjectTabValue[];
   tech: string[];
   features: string[];
   description: string;

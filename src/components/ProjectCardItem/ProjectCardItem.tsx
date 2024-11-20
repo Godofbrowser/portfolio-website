@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { AppIcon } from '../ui/AppIcon'
 import { Button } from '../ui/button'
 import { useState } from 'react'
+import { AspectRatioImage } from '../AspectRatioImage/AspectRatioImage'
 
 interface ProjectCardItemProps {
     project: IProject,
@@ -22,12 +23,20 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
           {/* Card container */}
           <div className="">
             {/* Card image */}
-            <Image
+            {/* <Image
               src={project.images[0].url}
               width={project.images[0].width}
               height={project.images[0].height}
               alt="portfolio project"
-            />
+            /> */}
+            <AspectRatioImage ratio={3/5} className='bg-slate-100' style={{backgroundColor: project.images[0].bgColor}}>
+              <Image
+                src={project.images[0].url}
+                fill
+                alt="portfolio project"
+                className="object-contain object-center"
+              />
+            </AspectRatioImage>
           </div>
 
           <div className="p-3">
@@ -44,7 +53,7 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
                 </span>
               ))}
             </p>
-            <p className="max-sm:text-sm">{project.description}</p>
+            <p className="max-sm:text-sm text-muted-foreground">{project.description}</p>
           </div>
           <div className="mt-auto p-3">
             {/* Card footer */}

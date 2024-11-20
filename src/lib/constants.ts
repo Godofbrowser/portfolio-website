@@ -30,26 +30,42 @@ export const navLinks = [
 ]
 
 const imageBase = ''
+const imagesPlaceholder = [
+  {
+    url: `${imageBase}/images/portfolio/placeholder.png`,
+    bgColor: '#dddddd',
+    width: 600,
+    height: 400,
+  },
+  {
+    url: `${imageBase}/images/portfolio/placeholder.png`,
+    bgColor: '#dddddd',
+    width: 600,
+    height: 400,
+  },
+]
 export const projects: IProject[] = [
   {
-    title: 'Payzone',
-    tags: ['live'],
+    title: "Payzone",
+    tags: ["live"],
     tech: ["Vuejs", "Vuex", "Webpack", "SCSS", "HTML5", "Service Worker"],
     links: {
       demo: "https://payzone.ng",
     },
     features: [
-      "React-Based responsive Frontend",
-      "Secure and efficient deployment of smart contracts on Ethereum mainnet and test networks",
-      "A landing page enabling investors to acquire tokens during initial offerings (e.g., ICOs).",
-      "Integration with Web3 for interacting with Ethereum smart contracts",
-      "Secure handling of transactions and token acquisitions through blockchain technology",
-    ],
-    description: 'Payzone® is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD.',
-    role: '',
+      "Lorem Ipsum responsive UIs",
+      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+      "A simple page allowing users to access placeholder text during initial previews.",
+      "Integration with Ipsum for managing lorem text generation and interactions",
+      "Reliable processing of placeholder strings and dynamic text updates in the system"
+  ],
+    description:
+      "Payzone is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD.",
+    role: "",
     images: [
       {
         url: `${imageBase}/images/portfolio/payzone/landing-light.png`,
+        bgColor: '#f0e1eb',
         width: 1451,
         height: 872,
       },
@@ -66,7 +82,49 @@ export const projects: IProject[] = [
     ],
   },
   {
-    title: 'KittieFight',
+    title: "Vuejs-Dialog Plugin",
+    tags: ["live", "oss"],
+    tech: ["Vue", "HTML5", "SCSS", "webpack", "Vite"],
+    links: {
+      code: "https://github.com/godofbrowser/vuejs-dialog",
+      demo: "https://godofbrowser.github.io/vuejs-dialog/features.html",
+    },
+    features: [
+      "Lorem Ipsum responsive UIs",
+      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+      "A simple page allowing users to access placeholder text during initial previews.",
+      "Integration with Ipsum for managing lorem text generation and interactions",
+      "Reliable processing of placeholder strings and dynamic text updates in the system"
+  ],  
+    description:
+      "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
+    role: "",
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/vuejs-dialog/preview.png`,
+        bgColor: '#0d1116',
+        width: 1451,
+        height: 872,
+      },
+      {
+        url: `${imageBase}/images/portfolio/vuejs-dialog/loader.png`,
+        width: 1451,
+        height: 872,
+      },
+      {
+        url: `${imageBase}/images/portfolio/vuejs-dialog/soft.png`,
+        width: 1451,
+        height: 872,
+      },
+      {
+        url: `${imageBase}/images/portfolio/vuejs-dialog/prompt.png`,
+        width: 1451,
+        height: 872,
+      },
+    ],
+  },
+  {
+    title: "KittieFight",
     tags: [],
     tech: ["React", "Web3", "Truffle", "Ganache", "Solidity"],
     links: {
@@ -80,11 +138,13 @@ export const projects: IProject[] = [
       "Integration with Web3 for interacting with Ethereum smart contracts",
       "Secure handling of transactions and token acquisitions through blockchain technology",
     ],
-    description: 'KittieFight was a gamified mortal kombat for cryptokitties, which is a crowd-driven real-time Dapp fighting game on the Ethereum blockchain',
-    role: 'During my time at SuperDao’s KittieFights project, I gained hands-on experience in blockchain development with Solidity, where I wrote and deployed smart contracts on the Ethereum mainnet and test networks. I utilized Web3 technology to interact with these contracts and contributed to the design and maintenance of React components for the KittieFights web application. Additionally, I played a key role in developing the product’s landing page, enabling investors to acquire tokens during the initial offerings.',
+    description:
+      "KittieFight was a gamified mortal kombat for cryptokitties, which is a crowd-driven real-time Dapp fighting game on the Ethereum blockchain",
+    role: "During my time at SuperDao’s KittieFights project, I gained hands-on experience in blockchain development with Solidity, where I wrote and deployed smart contracts on the Ethereum mainnet and test networks. I utilized Web3 technology to interact with these contracts and contributed to the design and maintenance of React components for the KittieFights web application. Additionally, I played a key role in developing the product’s landing page, enabling investors to acquire tokens during the initial offerings.",
     images: [
       {
         url: `${imageBase}/images/portfolio/kittiefight/kittiefight-connected.png`,
+        bgColor: '#eeeff8',
         width: 1451,
         height: 872,
       },
@@ -96,24 +156,26 @@ export const projects: IProject[] = [
     ],
   },
   {
-    title: 'Okadabooks',
+    title: "Okadabooks",
     tags: [],
     tech: ["React", "Nextjs", "Redux", "Nodejs", "Laravel", "Nginx"],
     links: {
       reference: "https://en.wikipedia.org/wiki/OkadaBooks",
     },
     features: [
-      "React-Based responsive Frontend",
-      "Secure and efficient deployment of smart contracts on Ethereum mainnet and test networks",
-      "A landing page enabling investors to acquire tokens during initial offerings (e.g., ICOs).",
-      "Integration with Web3 for interacting with Ethereum smart contracts",
-      "Secure handling of transactions and token acquisitions through blockchain technology",
-    ],
-    description: 'OkadaBooks was a self-publishing and bookselling platform, a virtual bookshelve where you can read thousands of books on different genres from epic romance novels to heart-warming thrillers',
-    role: '',
+      "Lorem Ipsum responsive UIs",
+      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+      "A simple page allowing users to access placeholder text during initial previews.",
+      "Integration with Ipsum for managing lorem text generation and interactions",
+      "Reliable processing of placeholder strings and dynamic text updates in the system"
+  ],
+    description:
+      "OkadaBooks was a self-publishing and bookselling platform, a virtual bookshelve where you can read thousands of books on different genres from epic romance novels to heart-warming thrillers",
+    role: "",
     images: [
       {
         url: `${imageBase}/images/portfolio/okadabooks/okadabooks-store.png`,
+        bgColor: '#636363',
         width: 1451,
         height: 872,
       },
@@ -123,5 +185,41 @@ export const projects: IProject[] = [
         height: 872,
       },
     ],
+  },{
+    title: "Givvable",
+    tags: ['live'],
+    tech: ["Tech1", "Tech2", "Tech3"],
+    links: {
+      demo: "/",
+    },
+    features: [
+      "Lorem Ipsum responsive UIs",
+      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+      "A simple page allowing users to access placeholder text during initial previews.",
+      "Integration with Ipsum for managing lorem text generation and interactions",
+      "Reliable processing of placeholder strings and dynamic text updates in the system"
+  ],
+    description:
+    "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
+    role: "",
+    images: imagesPlaceholder,
+  },{
+    title: "Nursa",
+    tags: ['live'],
+    tech: ["Tech1", "Tech2", "Tech3"],
+    links: {
+      reference: "/",
+    },
+    features: [
+      "Lorem Ipsum responsive UIs",
+      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+      "A simple page allowing users to access placeholder text during initial previews.",
+      "Integration with Ipsum for managing lorem text generation and interactions",
+      "Reliable processing of placeholder strings and dynamic text updates in the system"
+  ],
+    description:
+    "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
+    role: "",
+    images: imagesPlaceholder,
   },
-]
+];
