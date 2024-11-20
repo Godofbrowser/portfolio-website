@@ -20,6 +20,12 @@ const PlatformInfo = () => {
   return null
 }
 
+const footerLinks = [
+  { label: 'Articles', link: 'https://medium.com/@ejjay' },
+  { label: 'Resume', link: 'https://docs.google.com/document/d/e/2PACX-1vRBaSJImuHYeHooFXol99o1oZa43QEuKFvJtqs8FofyIcpTnXnAYGt0cQQ5xkdwlA/pub' },
+  { label: 'Hire me', link: 'https://www.upwork.com/freelancers/~01e4ba9941a5659bb3' },
+]
+
 
 export default function Home() {
   
@@ -57,10 +63,23 @@ export default function Home() {
 
         <footer className="">
           <div className="container px-4 mx-auto p-3 py-16 relative before:top-0 before:left-[15px] before:absolute before:w-[calc(100%-30px)] before:h-px before:bg-slate-300">
-            <p className='max-md:text-center leading-loose'>
-              Copyright &copy; 2024<span> - </span>
-              <a href="https://github.com/Godofbrowser"><span className='highlighted-text'>godofbrowser</span></a> <span className='max-md:hidden'>|</span> <span className="whitespace-nowrap">Don&apos;t hesitate to reach out.</span>
-            </p>
+            <div className='flex flex-col lg:flex-row-reverse justify-between'>
+              <ul className='flex justify-center max-lg:mb-8'>
+                {footerLinks.map(({ label, link }) => (
+                  <li className='ml-2 first:ml-0'><Link key={label} href={link} target="_blank" className="highlighted-text">{label}</Link></li>
+                ))}
+              </ul>
+              <p className="max-lg:text-center leading-loose">
+                Copyright &copy; 2024<span> - </span>
+                <a href="https://github.com/Godofbrowser">
+                  <span className="highlighted-text">godofbrowser</span>
+                </a>{" "}
+                <span className="max-sm:hidden">|</span>{" "}
+                <span className="whitespace-nowrap max-sm:block">
+                  Don&apos;t hesitate to reach out.
+                </span>
+              </p>
+            </div>
           </div>
         </footer>
       </main>
