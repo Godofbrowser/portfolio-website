@@ -1,23 +1,21 @@
 "use client";
 
 import { IProject, IProjectTabValue } from "@/interfaces/project.interface";
-import { appUrl, projects } from "@/lib/constants";
+import { projects } from "@/lib/constants";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ProjectCardItem } from "../ProjectCardItem/ProjectCardItem";
 import { ProjectModal } from "../ProjectModal/project-modal";
-import { AppButtonGroup } from "../ui/AppButtonGroup"
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 
 
 const ProjectsSection = () => {
-    const options: {label: string; value: IProjectTabValue}[] = [
+    const options: {label: string; value: IProjectTabValue}[] = useMemo(() => [
         {label: 'All Projects', value: 'all'},
         {label: 'Has Demo', value: 'live'},
         {label: 'Open Source', value: 'oss'},
-    ]
+    ], [])
     const [activeTab, setActiveTab] = useState<IProjectTabValue>(options[0].value)
     const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
