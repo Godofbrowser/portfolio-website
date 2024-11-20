@@ -95,7 +95,6 @@ export const projects: IProject[] = [
       },
     ],
   },{
-    ...(projectPlaceholder as IProject),
     title: "Developer portfolio",
     tags: ['live', 'oss'],
     tech: ["Typescript", "React", "Nextjs", "Radix-ui", "Shadcn-ui", "TailwindCSS"],
@@ -128,13 +127,20 @@ export const projects: IProject[] = [
       },
     ]
   },{
-    ...(projectPlaceholder as IProject),
     title: "Nursa",
     tags: ['live'],
     tech: ["Angular", "Ionic", "Ngxs", "Typescript", "Nodejs", "Firebase"],
     links: {
       demo: "https://app.nursa.com/",
     },
+    description: "Nursa is a healthcare staffing platform that improves patient care by connecting nurses seeking flexible work with facilities in need of help",
+    role: "During my time at ITCraftship, which was later acquired by Nursa, I contributed significantly to the development and refinement of the Nursa platform. I implemented the animated splash screen, enhancing the app's initial user experience. Additionally, I rewrote the authentication logic, addressing inconsistencies that previously impacted both developers and users. This overhaul streamlined the development process, improved predictability, and enabled seamless deep-linking functionality, ultimately enhancing the app's reliability and user satisfaction",
+    features: [
+      "Cross-Platform Compatibility: Built with Angular and Ionic, utilizing a single codebase to deliver a seamless experience across web, Android, and iOS applications",
+      "Shift Posting and Application: Facilities can post available shifts, and qualified nurses can view and apply for these opportunities",
+      "Scheduling and Payments: Accepted nurses are scheduled to work at the facility and receive payment for their services directly through the platform",
+      "Improved Patient Care: Streamlines staffing processes to ensure facilities are adequately staffed, enhancing patient outcomes",
+    ],
     images: [
       {
         url: `${imageBase}/images/portfolio/nursa/preview1.png`,
@@ -268,7 +274,6 @@ export const projects: IProject[] = [
       },
     ],
   },{
-    ...(projectPlaceholder as IProject),
     title: "Givvable",
     tags: ['live'],
     tech: ["Vuejs", "Nuxtjs", "Quasar", "Elastic search", "Nodejs", "Typeorm", "Terraform", "Objection", "Typescript", "AWS S3"],
@@ -311,7 +316,6 @@ export const projects: IProject[] = [
       },
     ],
   },{
-    ...(projectPlaceholder as IProject),
     title: "Laravel-Restricted",
     tags: ['oss'],
     tech: ["PHP", "Laravel", "Composer", "Open Source"],
