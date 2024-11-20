@@ -8,7 +8,7 @@ export function Skills() {
   const defaultTab= 'frontend'
   const skillCategories = {
     frontend: ["Vue", "NuxtJs", "React", "ReactNative", "NextJs", "Angular 2+", "Ionic", "TailwindCSS"],
-    backend: ["Laravel (PHP)", "NestJs (NodeJs)", "Prompt Engineering", "Relational DB", "Document DB", "TypeORM", "ObjectionORM", "EloquentORM"],
+    backend: ["Laravel (PHP)", "NestJs (NodeJs)", "Prompt Engineering", "SQL DB", "NoSQL DB", "TypeORM", "ObjectionORM", "EloquentORM"],
     devOps: ["Docker", "Codemagic", "Appflow", "Azure pipelines", "AWS", "GCP", "Github Actions", "Heroku"],
     tools: ["Typescript", "Webpack", "Rollup", "Vite", "Elastic Search", "LLM", "GraphQL"]
 
