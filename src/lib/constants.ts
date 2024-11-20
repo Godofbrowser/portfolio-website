@@ -325,6 +325,7 @@ export const projects: IProject[] = [
       reference: "https://github.com/Codulab/laravel-restricted/commits?author=Godofbrowser",
     },
     description: "Restricted is a Laravel package that prevents users from signing up with reserved words, enhancing application security and routing integrity",
+    role: "I designed and developed the Laravel Restricted package from scratch to enhance application security and routing integrity. The tool prevents users from signing up with reserved words that match route segments or custom keywords like "cart" or "admin," managed via a reserved.txt file. I also implemented the `restricted:index` command-line utility for efficient keyword management and added robust validation to ensure a seamless user experience. This package safeguards critical keywords, improving routing logic and overall security",
     features: [
       "Route-Based Word Restriction: Automatically identifies and restricts users from signing up with reserved words that match route segments (e.g., \"login\" or \"register\")",
       'Custom Reserved Words: Allows manual addition of reserved words such as "cart," "products," or "admin" via a reserved.txt file',
