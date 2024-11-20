@@ -1,7 +1,8 @@
 import { ThemeProvider } from "@/containers/ThemeProvider";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from "next/font/google";
-import { appDescription, person, appTitle, appUrl } from '../lib/constants'
+import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID } from '../lib/constants'
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -75,6 +76,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId={GA_TRACKING_ID} />
     </html>
   );
 }
