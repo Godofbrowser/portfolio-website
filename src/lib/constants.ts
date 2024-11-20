@@ -48,7 +48,7 @@ const projectPlaceholder: Partial<IProject> = {
   features: [
     "Lorem Ipsum responsive UIs",
     "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-    "A simple page allowing users to access placeholder text during initial previews.",
+    "A simple page allowing users to access placeholder text during initial previews",
     "Integration with Ipsum for managing lorem text generation and interactions",
     "Reliable processing of placeholder strings and dynamic text updates in the system"
 ],
@@ -66,16 +66,16 @@ export const projects: IProject[] = [
       demo: "https://payzone.ng",
     },
     features: [
-      "Vue.js-Based Frontend: Built with Vue and Vuex for a responsive and dynamic interface.",
-      "Modern Theming: Styled with SCSS to offer both light and dark themes for an enhanced user experience.",
-      "Intuitive User Experience: Designed to simplify bill payments and provide easy access to storefront management.",
-      "Wallet Functionality: Users can create, fund, and manage their wallets for seamless transactions.",
-      "Mini-Storefront: Users can set up a personalized storefront to sell goods directly on the platform.",
-      "Money Transfers: Secure options to send and receive money between users.",
+      "Vue.js-Based Frontend: Built with Vue and Vuex for a responsive and dynamic interface",
+      "Modern Theming: Styled with SCSS to offer both light and dark themes for an enhanced user experience",
+      "Intuitive User Experience: Designed to simplify bill payments and provide easy access to storefront management",
+      "Wallet Functionality: Users can create, fund, and manage their wallets for seamless transactions",
+      "Mini-Storefront: Users can set up a personalized storefront to sell goods directly on the platform",
+      "Money Transfers: Secure options to send and receive money between users",
   ],
     description:
-      "Payzone is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD.",
-    role: "I designed and developed theme-based, responsive, and cross-browser-compatible user interfaces, ensuring a seamless user experience. I implemented core UI components for wallet management, including features to send and receive money. Additionally, I developed the mini storefront functionality, enabling users to sell products while providing buyers with a streamlined shopping and checkout experience.",
+      "Payzone is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD",
+    role: "I designed and developed theme-based, responsive, and cross-browser-compatible user interfaces, ensuring a seamless user experience. I implemented core UI components for wallet management, including features to send and receive money. Additionally, I developed the mini storefront functionality, enabling users to sell products while providing buyers with a streamlined shopping and checkout experience",
     images: [
       {
         url: `${imageBase}/images/portfolio/payzone/landing-light.png`,
@@ -103,6 +103,16 @@ export const projects: IProject[] = [
       code: "https://github.com/Godofbrowser/portfolio-website/tree/main/src",
       demo: "https://emeke-ajeh.netlify.app/",
     },
+    description: "This portfolio website is a sleek and modern single-page application developed with Next.js, showcasing the developer's skills, projects, and professional achievements",
+    features: [
+      "Server-Side Rendering (SSR): Ensures fast load times and improved performance for optimal user experience",
+      "SEO Optimization: Designed with best practices to enhance visibility and search engine rankings",
+      "Skill and Project Showcase: Organized presentation of skills and past projects, allowing users to access more details with minimal clicks",
+      "Project Gallery: Displays visually appealing screenshots of projects to highlight accomplishments",
+      "Modern Design with Theming: Offers a sleek, contemporary interface with light and dark mode toggle functionality",
+      "Lightweight and Single Page: Streamlined, fast, and efficient single-page application",
+    ],
+    role: "I designed and developed my Next.js portfolio website from scratch, leveraging server-side rendering (SSR) to ensure fast load times and optimal performance. I implemented SEO-friendly features to enhance visibility and improve search engine rankings. The website showcases my skills and projects in a visually appealing and organized manner, with an interactive gallery for project screenshots and detailed information accessible with minimal clicks. I incorporated a modern design with a light and dark mode toggle for enhanced usability and developed the application as a lightweight, single-page experience to ensure seamless navigation and efficiency",
     images: [
       {
         url: `${imageBase}/images/portfolio/developer-portfolio/preview1.png`,
@@ -163,7 +173,7 @@ export const projects: IProject[] = [
     features: [
       "Lorem Ipsum responsive UIs",
       "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews.",
+      "A simple page allowing users to access placeholder text during initial previews",
       "Integration with Ipsum for managing lorem text generation and interactions",
       "Reliable processing of placeholder strings and dynamic text updates in the system"
   ],  
@@ -205,13 +215,13 @@ export const projects: IProject[] = [
     features: [
       "React-Based responsive Frontend",
       "Secure and efficient deployment of smart contracts on Ethereum mainnet and test networks",
-      "A landing page enabling investors to acquire tokens during initial offerings (e.g., ICOs).",
+      "A landing page enabling investors to acquire tokens during initial offerings (e.g., ICOs)",
       "Integration with Web3 for interacting with Ethereum smart contracts",
       "Secure handling of transactions and token acquisitions through blockchain technology",
     ],
     description:
       "KittieFight was a gamified mortal kombat for cryptokitties, which is a crowd-driven real-time Dapp fighting game on the Ethereum blockchain",
-    role: "During my time at SuperDao’s KittieFights project, I gained hands-on experience in blockchain development with Solidity, where I wrote and deployed smart contracts on the Ethereum mainnet and test networks. I utilized Web3 technology to interact with these contracts and contributed to the design and maintenance of React components for the KittieFights web application. Additionally, I played a key role in developing the product’s landing page, enabling investors to acquire tokens during the initial offerings.",
+    role: "During my time at SuperDao’s KittieFights project, I gained hands-on experience in blockchain development with Solidity, where I wrote and deployed smart contracts on the Ethereum mainnet and test networks. I utilized Web3 technology to interact with these contracts and contributed to the design and maintenance of React components for the KittieFights web application. Additionally, I played a key role in developing the product’s landing page, enabling investors to acquire tokens during the initial offerings",
     images: [
       {
         url: `${imageBase}/images/portfolio/kittiefight/kittiefight-connected.png`,
@@ -236,7 +246,7 @@ export const projects: IProject[] = [
     features: [
       "Lorem Ipsum responsive UIs",
       "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews.",
+      "A simple page allowing users to access placeholder text during initial previews",
       "Integration with Ipsum for managing lorem text generation and interactions",
       "Reliable processing of placeholder strings and dynamic text updates in the system"
   ],
