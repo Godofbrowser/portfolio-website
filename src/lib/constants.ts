@@ -66,15 +66,16 @@ export const projects: IProject[] = [
       demo: "https://payzone.ng",
     },
     features: [
-      "Lorem Ipsum responsive UIs",
-      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews.",
-      "Integration with Ipsum for managing lorem text generation and interactions",
-      "Reliable processing of placeholder strings and dynamic text updates in the system"
+      "Vue.js-Based Frontend: Built with Vue and Vuex for a responsive and dynamic interface.",
+      "Modern Theming: Styled with SCSS to offer both light and dark themes for an enhanced user experience.",
+      "Intuitive User Experience: Designed to simplify bill payments and provide easy access to storefront management.",
+      "Wallet Functionality: Users can create, fund, and manage their wallets for seamless transactions.",
+      "Mini-Storefront: Users can set up a personalized storefront to sell goods directly on the platform.",
+      "Money Transfers: Secure options to send and receive money between users.",
   ],
     description:
       "Payzone is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD.",
-    role: "",
+    role: "I designed and developed theme-based, responsive, and cross-browser-compatible user interfaces, ensuring a seamless user experience. I implemented core UI components for wallet management, including features to send and receive money. Additionally, I developed the mini storefront functionality, enabling users to sell products while providing buyers with a streamlined shopping and checkout experience.",
     images: [
       {
         url: `${imageBase}/images/portfolio/payzone/landing-light.png`,
