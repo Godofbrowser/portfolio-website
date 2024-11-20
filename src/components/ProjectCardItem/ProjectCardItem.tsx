@@ -23,12 +23,6 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
           {/* Card container */}
           <div className="">
             {/* Card image */}
-            {/* <Image
-              src={project.images[0].url}
-              width={project.images[0].width}
-              height={project.images[0].height}
-              alt="portfolio project"
-            /> */}
             <AspectRatioImage ratio={3/5} className='bg-slate-100' style={{backgroundColor: project.images[0].bgColor}}>
               <Image
                 src={project.images[0].url}

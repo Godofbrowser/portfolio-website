@@ -7,14 +7,13 @@ interface AspectRatioImageProps {
     className?: string;
     style?: React.CSSProperties;
     ratio?: number
-  }
+}
 
-export function AspectRatioImage({ children, className, style, ratio = 1/2 }: AspectRatioImageProps) {
-    const ref = useRef<HTMLDivElement>(null)
+export function AspectRatioImage({ children, className = '', style, ratio = 1/2 }: AspectRatioImageProps) {
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (!ref.current) return
-        console.log('#'.repeat(45), ' observing')
         const resizeObserver = new ResizeObserver((entries) => {
             const [box] = entries
             // @ts-ignore
@@ -29,10 +28,7 @@ export function AspectRatioImage({ children, className, style, ratio = 1/2 }: As
       <div
         ref={ref}
         style={style}
-        className={cn(
-          "relative w-full min-h-1 overflow-hidden",
-          className || ""
-        )}
+        className={cn("relative w-full min-h-1 overflow-hidden", className)}
       >
         {children}
       </div>
