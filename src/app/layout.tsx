@@ -6,6 +6,7 @@ import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID } from '../lib
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const isProduction = process.env.NODE_ENV === 'production'
 const hasGoneLive = false
 
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
@@ -76,7 +77,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId={GA_TRACKING_ID} />
+      {isProduction ? (<GoogleAnalytics gaId={GA_TRACKING_ID} />) : null}
     </html>
   );
 }
