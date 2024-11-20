@@ -74,7 +74,7 @@ export const projects: IProject[] = [
       "Money Transfers: Secure options to send and receive money between users",
   ],
     description:
-      "Payzone is a bills aggregation payment platform that provides customers of a merchant with convenient means to place orders, and pay for bills through flexible payment methods using their debit cards, transfer bank or USSD",
+      "Payzone is a comprehensive bill aggregation and payment platform that enables merchants' customers to conveniently place orders, pay bills, and manage their own wallets",
     role: "I designed and developed theme-based, responsive, and cross-browser-compatible user interfaces, ensuring a seamless user experience. I implemented core UI components for wallet management, including features to send and receive money. Additionally, I developed the mini storefront functionality, enabling users to sell products while providing buyers with a streamlined shopping and checkout experience",
     images: [
       {
@@ -244,15 +244,16 @@ export const projects: IProject[] = [
       reference: "https://en.wikipedia.org/wiki/OkadaBooks",
     },
     features: [
-      "Lorem Ipsum responsive UIs",
-      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews",
-      "Integration with Ipsum for managing lorem text generation and interactions",
-      "Reliable processing of placeholder strings and dynamic text updates in the system"
+      "React and Next.js Frontend: Built with modern frameworks to deliver a responsive and dynamic user experience",
+      "Cross-Browser and Cross-Device Compatibility: Optimized to work seamlessly across various screen sizes, browsers, and devices",
+      "Self-Publishing Capabilities: Enables users to upload and showcase their publications directly on the platform",
+      "Integrated E-Commerce Functionality: Readers can purchase content securely and access it for reading on the platform",
+      "User Interaction and Feedback: Allows readers to rate, review, and flag content, fostering a collaborative and engaging environment",
+      "Responsive Design: Adapts fluidly to different screen sizes for a consistent user experience",
   ],
     description:
-      "OkadaBooks was a self-publishing and bookselling platform, a virtual bookshelve where you can read thousands of books on different genres from epic romance novels to heart-warming thrillers",
-    role: "",
+      "OkadaBooks was a self-publishing and bookselling platform offering a virtual bookshelf with thousands of books across genres, from romance to thrillers.",
+    role: "During my time at OkadaBooks, I maintained the legacy application while leading the development of a modern frontend using Next.js. I collaborated closely on API development to ensure seamless integration with the new frontend and played an active role in managing the server infrastructure. My work contributed to enhancing the platform's functionality and performance, providing users with an improved experience while supporting the transition to a more scalable and maintainable architecture",
     images: [
       {
         url: `${imageBase}/images/portfolio/okadabooks/okadabooks-store.png`,
