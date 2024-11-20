@@ -10,7 +10,7 @@ export const person = {
   email: 'ajemeke@gmail.com',
   userPhoto: "/images/ajeh-emeke.jpg",
   userHeadline: 'Full Stack Engineer',
-  about: "I'm a focused and quick-learning software developer with more than 7 years of experience in developing highly efficient and scalable web applications. A critical thinker, with strong analytical and collaboration skills with an eye for security and maintainability",
+  about: "I'm a focused and quick-learning software developer with experience building highly efficient and scalable web applications since 2016. A critical thinker with strong analytical and collaboration skills, I have a keen eye for security and maintainability",
 };
 
 
@@ -165,7 +165,7 @@ export const projects: IProject[] = [
   {
     title: "Vuejs-Dialog Plugin",
     tags: ["live", "oss"],
-    tech: ["Vue", "HTML5", "SCSS", "webpack", "Vite"],
+    tech: ["Vue", "HTML5", "SCSS", "webpack", "Vite", "Open Source"],
     links: {
       code: "https://github.com/godofbrowser/vuejs-dialog",
       demo: "https://godofbrowser.github.io/vuejs-dialog/features.html",
@@ -275,6 +275,15 @@ export const projects: IProject[] = [
     links: {
       demo: "https://app.givvable.com/",
     },
+    description: 'Givvable is a platform specializing in automating supplier diligence and sustainable procurement, designed to streamline processes for corporate and government buyers and suppliers',
+    role: "During my time at Givvable, I maintained legacy applications while leading the rewrite of the core backend using Node.js, TypeORM, and Elasticsearch to optimize query performance. I also enhanced the frontend by rewriting key components, including an advanced search box with autocomplete functionality. Additionally, I developed a highly efficient and user-friendly filter component capable of managing large selection lists, improving usability and maintainability. My contributions focused on enhancing the platform's performance, scalability, and user experience",
+    features: [
+      "Modern Backend Architecture: Rewritten core backend using Node.js and TypeORM to ensure high performance and maintainability",
+      "Vue-Based Frontend: Built with Vue, Vuex, and Nuxt.js for a dynamic and scalable user interface",
+      "Advanced Search Functionality: Features an intelligent search box with autocomplete for faster and more accurate query results",
+      "Efficient Filter System: Highly optimized filter component capable of handling large data sets for streamlined selection and categorization",
+      "Elasticsearch Integration: Backend powered by Elasticsearch for fast and efficient querying of supplier and procurement data",
+    ],
     images: [
       {
         url: `${imageBase}/images/portfolio/givvable/preview1.png`,
@@ -305,11 +314,19 @@ export const projects: IProject[] = [
     ...(projectPlaceholder as IProject),
     title: "Laravel-Restricted",
     tags: ['oss'],
-    tech: ["PHP", "Laravel", "Composer"],
+    tech: ["PHP", "Laravel", "Composer", "Open Source"],
     links: {
       code: "https://github.com/Codulab/laravel-restricted/tree/master/src",
       reference: "https://github.com/Codulab/laravel-restricted/commits?author=Godofbrowser",
     },
+    description: "Restricted is a Laravel package that prevents users from signing up with reserved words, enhancing application security and routing integrity",
+    features: [
+      "Route-Based Word Restriction: Automatically identifies and restricts users from signing up with reserved words that match route segments (e.g., \"login\" or \"register\")",
+      'Custom Reserved Words: Allows manual addition of reserved words such as "cart," "products," or "admin" via a reserved.txt file',
+      "Command-Line Utility: Provides the restricted:index command to manage and update the reserved word list efficiently",
+      "Validation Support: Ensures seamless user experience by returning appropriate validation messages when restricted words are used during signup",
+      "Enhanced Application Security: Prevents conflicts and improves routing logic by safeguarding reserved keywords",
+    ],
     images: [
       {
         url: `${imageBase}/images/portfolio/laravel-restricted/preview1.png`,
