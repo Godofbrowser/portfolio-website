@@ -44,6 +44,19 @@ const imagesPlaceholder = [
     height: 400,
   },
 ]
+const projectPlaceholder: Partial<IProject> = {
+  features: [
+    "Lorem Ipsum responsive UIs",
+    "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
+    "A simple page allowing users to access placeholder text during initial previews.",
+    "Integration with Ipsum for managing lorem text generation and interactions",
+    "Reliable processing of placeholder strings and dynamic text updates in the system"
+],
+  description:
+  "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
+  role: "",
+  images: imagesPlaceholder,
+}
 export const projects: IProject[] = [
   {
     title: "Payzone",
@@ -80,6 +93,29 @@ export const projects: IProject[] = [
         height: 872,
       },
     ],
+  },{
+    ...(projectPlaceholder as IProject),
+    title: "Developer portfolio",
+    tags: ['live', 'oss'],
+    tech: ["Typescript", "React", "Nextjs", "Radix-ui", "Shadcn-ui", "TailwindCSS"],
+    links: {
+      code: "https://github.com/Godofbrowser/portfolio-website/tree/main/src",
+      demo: "https://emeke-ajeh.netlify.app/",
+    },
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/developer-portfolio/preview1.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/developer-portfolio/preview2.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+    ]
   },
   {
     title: "Vuejs-Dialog Plugin",
@@ -126,7 +162,7 @@ export const projects: IProject[] = [
   {
     title: "KittieFight",
     tags: [],
-    tech: ["React", "Web3", "Truffle", "Ganache", "Solidity"],
+    tech: ["Web3", "React", "Truffle", "Ganache", "Solidity"],
     links: {
       code: "https://github.com/kittiefight",
       reference: "https://www.youtube.com/watch?v=TDXOJYbFRiw",
@@ -186,40 +222,95 @@ export const projects: IProject[] = [
       },
     ],
   },{
+    ...(projectPlaceholder as IProject),
     title: "Givvable",
     tags: ['live'],
-    tech: ["Tech1", "Tech2", "Tech3"],
+    tech: ["Vuejs", "Nuxtjs", "Quasar", "Elastic search", "Nodejs", "Typeorm", "Terraform", "Objection", "Typescript", "AWS S3"],
     links: {
-      demo: "/",
+      demo: "https://app.givvable.com/",
     },
-    features: [
-      "Lorem Ipsum responsive UIs",
-      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews.",
-      "Integration with Ipsum for managing lorem text generation and interactions",
-      "Reliable processing of placeholder strings and dynamic text updates in the system"
-  ],
-    description:
-    "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
-    role: "",
-    images: imagesPlaceholder,
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/givvable/preview1.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/givvable/preview2.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/givvable/preview3.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/givvable/preview4.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+    ],
   },{
+    ...(projectPlaceholder as IProject),
     title: "Nursa",
     tags: ['live'],
-    tech: ["Tech1", "Tech2", "Tech3"],
+    tech: ["Angular", "Ionic", "Ngxs", "Typescript", "Nodejs", "Firebase"],
     links: {
       reference: "/",
     },
-    features: [
-      "Lorem Ipsum responsive UIs",
-      "Quick and reliable delivery of lorem widgets on Ipsum production and dev servers",
-      "A simple page allowing users to access placeholder text during initial previews.",
-      "Integration with Ipsum for managing lorem text generation and interactions",
-      "Reliable processing of placeholder strings and dynamic text updates in the system"
-  ],
-    description:
-    "Lorem is a placeholder platform, a virtual lorem space where you can browse countless widgets in various categories from random text blocks to engaging filler paragraphs",
-    role: "",
-    images: imagesPlaceholder,
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview1.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview2.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview3.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/nursa/preview4.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+    ],
+  },{
+    ...(projectPlaceholder as IProject),
+    title: "Laravel-Restricted",
+    tags: ['oss'],
+    tech: ["PHP", "Laravel", "Composer"],
+    links: {
+      code: "https://github.com/Codulab/laravel-restricted/tree/master/src",
+      reference: "https://github.com/Codulab/laravel-restricted/commits?author=Godofbrowser",
+    },
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/laravel-restricted/preview1.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/laravel-restricted/preview2.png`,
+        bgColor: '#0d1116',
+        width: 0,
+        height: 0,
+      },
+    ]
   },
 ];

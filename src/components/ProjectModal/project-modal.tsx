@@ -13,6 +13,7 @@ import { Code2, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { IProject } from "@/interfaces/project.interface";
+import { AspectRatioImage } from "../AspectRatioImage/AspectRatioImage";
 
 interface ProjectModalProps {
   project: IProject;
@@ -33,15 +34,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         
         <div className="space-y-6">
           {/* Main Image */}
-          <div className="relative max-h-[400px] w-full border rounded-lg overflow-hidden">
+          <AspectRatioImage ratio={1/2} className='rounded-lg bg-slate-100' style={{backgroundColor: project.images[0].bgColor}}>
             <Image
               src={project.images[0].url}
-              alt={project.title}
-              width={project.images[0].width}
-              height={project.images[0].height}
-              className="object-cover rounded-lg"
+              fill
+              alt="portfolio project"
+              className="object-contain object-center"
             />
-          </div>
+          </AspectRatioImage>
 
           {/* Technologies */}
           <div>
@@ -74,16 +74,16 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           {/* Screenshots */}
           <div>
             <h3 className="text-lg font-semibold mb-2">Screenshots</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
               {project.images.map((image, index) => (
-                <div key={index} className="relative h-[200px]">
+                <AspectRatioImage key={index} ratio={3/5} className='rounded-lg bg-slate-100' style={{backgroundColor: image.bgColor}}>
                   <Image
                     src={image.url}
-                    alt={`${project.title} screenshot ${index + 1}`}
                     fill
-                    className="object-cover rounded-lg"
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="object-contain object-center"
                   />
-                </div>
+                </AspectRatioImage>
               ))}
             </div>
           </div>
