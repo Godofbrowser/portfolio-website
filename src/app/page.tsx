@@ -66,7 +66,7 @@ export default function Home() {
             <div className='flex flex-col lg:flex-row-reverse justify-between'>
               <ul className='flex justify-center max-lg:mb-8'>
                 {footerLinks.map(({ label, link }) => (
-                  <li className='ml-2 first:ml-0'><Link key={label} href={link} target="_blank" className="highlighted-text">{label}</Link></li>
+                  <li key={label} className='ml-2 first:ml-0'><Link href={link} target="_blank" className="highlighted-text">{label}</Link></li>
                 ))}
               </ul>
               <p className="max-lg:text-center leading-loose">

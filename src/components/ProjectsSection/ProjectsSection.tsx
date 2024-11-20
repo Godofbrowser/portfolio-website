@@ -28,7 +28,7 @@ const ProjectsSection = () => {
     const filteredProjects = useMemo(() => {
       if (activeTab === options[0].value) return projects
       return projects.filter(p => p.tags.includes(activeTab))
-    }, [activeTab])
+    }, [activeTab, options])
 
     return (
       <section id="projects" className="py-16">

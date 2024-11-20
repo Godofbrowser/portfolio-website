@@ -22,7 +22,7 @@ export function AspectRatioImage({ children, className = '', style, ratio = 1/2 
           
           resizeObserver.observe(ref.current);
           return () => resizeObserver.disconnect();
-    }, [])
+    }, [ratio])
 
     return (
       <div
