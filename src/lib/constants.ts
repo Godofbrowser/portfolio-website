@@ -9,7 +9,7 @@ export const appDescription = 'Full-stack software engineer specializing in web 
 export const person = {
   userFullName: "Emeke Ajeh",
   email: 'ajemeke@gmail.com',
-  userPhoto: "/images/ajeh-emeke.jpg",
+  userPhoto: "/images/ajeh-emeke.webp",
   userHeadline: 'Full Stack Engineer',
   about: "I'm a focused and quick-learning software developer with experience building highly efficient and scalable web applications since 2016. A critical thinker with strong analytical and collaboration skills, I have a keen eye for security and maintainability",
 };
@@ -79,18 +79,18 @@ export const projects: IProject[] = [
     role: "I designed and developed theme-based, responsive, and cross-browser-compatible user interfaces, ensuring a seamless user experience. I implemented core UI components for wallet management, including features to send and receive money. Additionally, I developed the mini storefront functionality, enabling users to sell products while providing buyers with a streamlined shopping and checkout experience",
     images: [
       {
-        url: `${imageBase}/images/portfolio/payzone/landing-light.png`,
+        url: `${imageBase}/images/portfolio/payzone/landing-light.webp`,
         bgColor: '#f0e1eb',
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/payzone/landing-dark.png`,
+        url: `${imageBase}/images/portfolio/payzone/landing-dark.webp`,
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/payzone/send.png`,
+        url: `${imageBase}/images/portfolio/payzone/send.webp`,
         width: 1451,
         height: 872,
       },
@@ -115,13 +115,13 @@ export const projects: IProject[] = [
     role: "I designed and developed my Next.js portfolio website from scratch, leveraging server-side rendering (SSR) to ensure fast load times and optimal performance. I implemented SEO-friendly features to enhance visibility and improve search engine rankings. The website showcases my skills and projects in a visually appealing and organized manner, with an interactive gallery for project screenshots and detailed information accessible with minimal clicks. I incorporated a modern design with a light and dark mode toggle for enhanced usability and developed the application as a lightweight, single-page experience to ensure seamless navigation and efficiency",
     images: [
       {
-        url: `${imageBase}/images/portfolio/developer-portfolio/preview1.png`,
+        url: `${imageBase}/images/portfolio/developer-portfolio/preview1.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/developer-portfolio/preview2.png`,
+        url: `${imageBase}/images/portfolio/developer-portfolio/preview2.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
@@ -144,25 +144,25 @@ export const projects: IProject[] = [
     ],
     images: [
       {
-        url: `${imageBase}/images/portfolio/nursa/preview1.png`,
+        url: `${imageBase}/images/portfolio/nursa/preview1.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/nursa/preview2.png`,
+        url: `${imageBase}/images/portfolio/nursa/preview2.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/nursa/preview3.png`,
+        url: `${imageBase}/images/portfolio/nursa/preview3.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/nursa/preview4.png`,
+        url: `${imageBase}/images/portfolio/nursa/preview4.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
@@ -189,23 +189,23 @@ export const projects: IProject[] = [
     role: "I designed and developed the Vuejs-Dialog plugin from the ground up, creating a lightweight and highly customizable solution to replace native browser confirm and alert dialogs. I implemented an intuitive user interface, multiple dialog types such as alert, confirm, and prompt, and additional confirm types to enhance user decision-making. I also designed the plugin to be extendable, with a simple API and support for customizable entry and exit animations, ensuring seamless integration and flexibility for developers. My work focused on delivering a modern, efficient, and versatile plugin for the Vue.js ecosystem",
     images: [
       {
-        url: `${imageBase}/images/portfolio/vuejs-dialog/preview.png`,
+        url: `${imageBase}/images/portfolio/vuejs-dialog/preview.webp`,
         bgColor: '#0d1116',
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/vuejs-dialog/loader.png`,
+        url: `${imageBase}/images/portfolio/vuejs-dialog/loader.webp`,
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/vuejs-dialog/soft.png`,
+        url: `${imageBase}/images/portfolio/vuejs-dialog/soft.webp`,
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/vuejs-dialog/prompt.png`,
+        url: `${imageBase}/images/portfolio/vuejs-dialog/prompt.webp`,
         width: 1451,
         height: 872,
       },
@@ -231,13 +231,13 @@ export const projects: IProject[] = [
     role: "During my time at SuperDao’s KittieFights project, I gained hands-on experience in blockchain development with Solidity, where I wrote and deployed smart contracts on the Ethereum mainnet and test networks. I utilized Web3 technology to interact with these contracts and contributed to the design and maintenance of React components for the KittieFights web application. Additionally, I played a key role in developing the product’s landing page, enabling investors to acquire tokens during the initial offerings",
     images: [
       {
-        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-connected.png`,
+        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-connected.webp`,
         bgColor: '#eeeff8',
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-paper.png`,
+        url: `${imageBase}/images/portfolio/kittiefight/kittiefight-paper.webp`,
         width: 1472,
         height: 900,
       },
@@ -263,13 +263,13 @@ export const projects: IProject[] = [
     role: "During my time at OkadaBooks, I maintained the legacy application while leading the development of a modern frontend using Next.js. I collaborated closely on API development to ensure seamless integration with the new frontend and played an active role in managing the server infrastructure. My work contributed to enhancing the platform's functionality and performance, providing users with an improved experience while supporting the transition to a more scalable and maintainable architecture",
     images: [
       {
-        url: `${imageBase}/images/portfolio/okadabooks/okadabooks-store.png`,
+        url: `${imageBase}/images/portfolio/okadabooks/okadabooks-store.webp`,
         bgColor: '#636363',
         width: 1451,
         height: 872,
       },
       {
-        url: `${imageBase}/images/portfolio/okadabooks/books.png`,
+        url: `${imageBase}/images/portfolio/okadabooks/books.webp`,
         width: 1451,
         height: 872,
       },
@@ -292,25 +292,25 @@ export const projects: IProject[] = [
     ],
     images: [
       {
-        url: `${imageBase}/images/portfolio/givvable/preview1.png`,
+        url: `${imageBase}/images/portfolio/givvable/preview1.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/givvable/preview2.png`,
+        url: `${imageBase}/images/portfolio/givvable/preview2.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/givvable/preview3.png`,
+        url: `${imageBase}/images/portfolio/givvable/preview3.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/givvable/preview4.png`,
+        url: `${imageBase}/images/portfolio/givvable/preview4.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
@@ -335,13 +335,13 @@ export const projects: IProject[] = [
     ],
     images: [
       {
-        url: `${imageBase}/images/portfolio/laravel-restricted/preview1.png`,
+        url: `${imageBase}/images/portfolio/laravel-restricted/preview1.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,
       },
       {
-        url: `${imageBase}/images/portfolio/laravel-restricted/preview2.png`,
+        url: `${imageBase}/images/portfolio/laravel-restricted/preview2.webp`,
         bgColor: '#0d1116',
         width: 0,
         height: 0,

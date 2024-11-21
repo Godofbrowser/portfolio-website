@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     siteName: `${person.userFullName}'s Portfolio`,
     images: [
       {
-        url: `${appUrl}/images/profile-card-700x700.png`, // Must be an absolute URL
-        width: 700,
-        height: 700,
-        alt: person.userFullName,
-      },
-      {
         url: `${appUrl}/images/profile-card-1280x640.png`, // Must be an absolute URL
         width: 1280,
         height: 640,
+        alt: person.userFullName,
+      },
+      {
+        url: `${appUrl}/images/profile-card-700x700.png`, // Must be an absolute URL
+        width: 700,
+        height: 700,
         alt: person.userFullName,
       },
     ],

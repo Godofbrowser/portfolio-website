@@ -7,7 +7,7 @@ const LandingIntro = () => {
      return (
        <section className="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
          {/* background section */}
-         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/spiral-bg-light.png')] bg-cover bg-no-repeat bg-fixed [background-position:50%_center] dark:opacity-15"></div>
+         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/spiral-bg-light.webp')] bg-cover bg-no-repeat bg-fixed [background-position:50%_center] dark:opacity-15"></div>
          <div className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[3fr_9fr] max-md:pt-20 md:gap-12 px-6">
            <div className="overflow-hidden rounded-full size-32 md:size-44 shadow-md">
              <Image width={640} height={640} src={person.userPhoto} alt={person.userFullName} />
