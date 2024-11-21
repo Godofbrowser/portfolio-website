@@ -10,6 +10,17 @@ Tech:
 - NodeJs
 - Typescript
 
+## Dev Todo
+- [ ] Revisit Navbar
+- [ ] Add tests (snapshots for now)
+- [ ] Housekeeping - organize files and filenames
+- [ ] Revisit skills section - for wider viewport, make it 2 cols
+- [ ] Docs - add to readme, how come custom component (e.g AppIcon, AspectRatioImage) works
+- [ ] Lighthouse score - highlight steps to improve
+- [ ] Lighthouse score - work on the highlighted steps
+
+---
+
 ## Getting Started
 
 First, run the development server:
