@@ -277,12 +277,12 @@ export const projects: IProject[] = [
   },{
     title: "Givvable",
     tags: ['live'],
-    tech: ["Vuejs", "Nuxtjs", "Quasar", "Elastic search", "Nodejs", "Typeorm", "Terraform", "Objection", "Typescript", "AWS S3"],
+    tech: ["Vuejs", "Nuxtjs", "Quasar", "Elastic search", "Nodejs", "Typeorm", "Terraform", "Objection", "Typescript", "AWS S3", "Azure B2C"],
     links: {
       demo: "https://app.givvable.com/",
     },
     description: 'Givvable is a platform specializing in automating supplier diligence and sustainable procurement, designed to streamline processes for corporate and government buyers and suppliers',
-    role: "During my time at Givvable, I maintained legacy applications while leading the rewrite of the core backend using Node.js, TypeORM, and Elasticsearch to optimize query performance. I also enhanced the frontend by rewriting key components, including an advanced search box with autocomplete functionality. Additionally, I developed a highly efficient and user-friendly filter component capable of managing large selection lists, improving usability and maintainability. My contributions focused on enhancing the platform's performance, scalability, and user experience",
+    role: "During my time at Givvable, I maintained legacy applications while leading the rewrite of the core backend using Node.js, TypeORM, and Elasticsearch to optimize query performance. I also enhanced the frontend by rewriting key components, including an advanced search box with autocomplete functionality. Additionally, I developed a highly efficient and user-friendly filter component capable of managing large selection lists, improving usability and maintainability. I also worked extensively on the authentication logic, integrating Azure B2C identity provider. My contributions focused on enhancing the platform's performance, scalability, and user experience",
     features: [
       "Modern Backend Architecture: Rewritten core backend using Node.js and TypeORM to ensure high performance and maintainability",
       "Vue-Based Frontend: Built with Vue, Vuex, and Nuxt.js for a dynamic and scalable user interface",
