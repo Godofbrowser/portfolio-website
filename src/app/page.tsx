@@ -22,7 +22,7 @@ export default function Home() {
   
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[1000] bg-background dark:bg-background shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]">
+      <header data-testid="page-header" className="fixed top-0 left-0 w-full z-[1000] bg-background dark:bg-background shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]">
         <div className="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4">
           {!disableHeaderNavigations ? null : (
             <h1 className="text-xl font-semibold">{appTitle}</h1>
@@ -52,7 +52,7 @@ export default function Home() {
         <Skills />
         <ProjectsSection />
 
-        <footer className="">
+        <footer data-testid="page-footer" className="">
           <div className="container px-4 mx-auto p-3 py-16 relative before:top-0 before:left-[15px] before:absolute before:w-[calc(100%-30px)] before:h-px before:bg-slate-300">
             <div className='flex flex-col lg:flex-row-reverse justify-between'>
               <ul className='flex justify-center max-lg:mb-8'>
