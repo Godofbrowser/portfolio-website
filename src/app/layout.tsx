@@ -2,12 +2,11 @@ import { ThemeProvider } from "@/containers/ThemeProvider";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from "next/font/google";
-import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID } from '../lib/constants'
+import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID, hasGoneLive, isProduction } from '../lib/constants'
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
-const isProduction = process.env.NODE_ENV === 'production'
-const hasGoneLive = false
 
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 export const metadata: Metadata = {
@@ -72,8 +71,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <ThemeProvider defaultTheme="dark">
+      <body className={cn(inter.className, "transition-colors duration-300")} suppressHydrationWarning={true}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
           {children}
         </ThemeProvider>
       </body>

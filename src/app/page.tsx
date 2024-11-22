@@ -10,16 +10,6 @@ import { About } from './about';
 import { Skills } from './skills';
 import { MotionConfig } from 'framer-motion';
 
-const PlatformInfo = () => {
-  console.log({
-    appUrl,
-    NETLIFY: process.env.NETLIFY,
-    URL: process.env.URL,
-    CONTEXT: process.env.CONTEXT,
-    BRANCH: process.env.BRANCH,
-  })
-  return null
-}
 
 const footerLinks = [
   { label: 'Articles', link: 'https://medium.com/@ejjay' },
@@ -32,7 +22,6 @@ export default function Home() {
   
   return (
     <>
-      <PlatformInfo />
       <header className="fixed top-0 left-0 w-full z-[1000] bg-background dark:bg-background shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]">
         <div className="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4">
           {!disableHeaderNavigations ? null : (

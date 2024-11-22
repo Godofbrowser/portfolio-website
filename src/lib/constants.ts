@@ -1,7 +1,10 @@
 import { AppIcon } from "@/components/ui/AppIcon";
 import { IProject } from "@/interfaces/project.interface";
 
+
 export const GA_TRACKING_ID = 'G-77ML118EGM'
+export const isProduction = process.env.NODE_ENV === 'production'
+export const hasGoneLive = true
 export const disableHeaderNavigations = true
 export const appTitle = 'Portfolio'
 export const appUrl: string = (process.env.NETLIFY ? process.env.URL : process.env.APP_URL) || ''

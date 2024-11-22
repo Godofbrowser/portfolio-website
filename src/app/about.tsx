@@ -30,10 +30,11 @@ export function About() {
     <section id="about" className="py-20">
       <div className="container px-4 mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5 }}
+          layout
           className="text-center mb-12 transition-none"
         >
           <h2 className="highlighted-heading text-3xl font-bold mb-4">About Me</h2>
@@ -46,7 +47,7 @@ export function About() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}

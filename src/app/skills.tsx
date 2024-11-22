@@ -18,9 +18,9 @@ export function Skills() {
     <section id="skills" className="py-20">
       <div className="container px-4 mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.5 }}
         className="text-center mb-12 transition-none"
       >
@@ -34,7 +34,7 @@ export function Skills() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="transition-none"
       >
