@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
-import { ReactNode, useEffect, useRef } from "react"
+import {CSSProperties, ReactNode, useEffect, useRef} from "react"
 
 
 interface AspectRatioImageProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
-    style?: React.CSSProperties;
+    style?: CSSProperties;
     ratio?: number
 }
 
@@ -19,7 +19,7 @@ export function AspectRatioImage({ children, className = '', style, ratio = 1/2 
             // @ts-ignore
             box.target.style.height = `${box.contentRect.width * ratio}px`;
           });
-          
+
           resizeObserver.observe(ref.current);
           return () => resizeObserver.disconnect();
     }, [ratio])

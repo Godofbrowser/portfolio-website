@@ -5,12 +5,12 @@ import { projects } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { ProjectCardItem } from "../ProjectCardItem/ProjectCardItem";
-import { ProjectModal } from "../ProjectModal/project-modal";
-import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
+import { ProjectModal } from "../ProjectModal/ProjectModal";
+import { Tabs, TabsList, TabsTrigger } from "../../ui/tabs";
 
 
 
-const ProjectsSection = () => {
+const SectionProjects = () => {
     const options: {label: string; value: IProjectTabValue}[] = useMemo(() => [
         {label: 'All Projects', value: 'all'},
         {label: 'Has Demo', value: 'live'},
@@ -87,6 +87,6 @@ const ProjectsSection = () => {
     );
 }
 
-ProjectsSection.displayName = 'ProjectsSection'
+SectionProjects.displayName = 'ProjectsSection'
 
-export { ProjectsSection }
+export { SectionProjects }

@@ -1,13 +1,13 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
-import { DarkModeBtn } from "@/components/DarkModeBtn";
-import { LandingIntro } from "@/components/LandingIntro/LandingIntro";
+import { AppModeToggle } from "@/components/ui/AppModeToggle";
+import { SectionHero } from "@/components/page-landing/SectionHero/SectionHero";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ProjectsSection } from '@/components/ProjectsSection/ProjectsSection';
+import { SectionProjects } from '@/components/page-landing/SectionProjects/SectionProjects';
 import { disableHeaderNavigations, appTitle, navLinks, appUrl } from '../lib/constants'
-import { About } from './about';
-import { Skills } from './skills';
+import { SectionAbout } from '../components/page-landing/SectionAbout/SectionAbout';
+import { SectionSkills } from '../components/page-landing/SectionSkills/SectionSkills';
 import { MotionConfig } from 'framer-motion';
 
 
@@ -27,7 +27,7 @@ export default function Home() {
           {!disableHeaderNavigations ? null : (
             <h1 className="text-xl font-semibold">{appTitle}</h1>
           )}
-          <DarkModeBtn
+          <AppModeToggle
             className={cn({ "ml-auto": disableHeaderNavigations })}
           />
           {disableHeaderNavigations ? null : (
@@ -47,10 +47,10 @@ export default function Home() {
       </header>
       <main>
       <MotionConfig reducedMotion="user">
-        <LandingIntro />
-        <About />
-        <Skills />
-        <ProjectsSection />
+        <SectionHero />
+        <SectionAbout />
+        <SectionSkills />
+        <SectionProjects />
 
         <footer data-testid="page-footer" className="">
           <div className="container px-4 mx-auto p-3 py-16 relative before:top-0 before:left-[15px] before:absolute before:w-[calc(100%-30px)] before:h-px before:bg-slate-300">

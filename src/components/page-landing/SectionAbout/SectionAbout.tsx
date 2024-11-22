@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../components/ui/card";
+import { Card, CardContent } from "../../ui/card";
 import { Code2, Server, Rocket } from "lucide-react";
 import { person } from "@/lib/constants";
 
-export function About() {
+export function SectionAbout() {
   const services = [
     {
       icon: <Code2 className="h-6 w-6" />,

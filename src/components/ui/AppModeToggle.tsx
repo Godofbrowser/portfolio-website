@@ -3,14 +3,14 @@
 import { ClientComponent } from "@/containers/ClientComponent";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-import { AppIcon } from "./ui/AppIcon";
-import { Button } from "./ui/button";
+import { AppIcon } from "./AppIcon";
+import { Button } from "./button";
 
 export interface DarkModeBtnProps {
     className?: string;
 }
 
-const DarkModeBtn = ({ className }: DarkModeBtnProps) => {
+const AppModeToggle = ({ className }: DarkModeBtnProps) => {
     const { theme, setTheme } = useTheme()
     return (
       <ClientComponent>
@@ -35,4 +35,4 @@ const DarkModeBtn = ({ className }: DarkModeBtnProps) => {
     );
 }
 
-export { DarkModeBtn }
+export { AppModeToggle }

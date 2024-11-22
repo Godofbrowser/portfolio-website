@@ -2,10 +2,10 @@ import { IProject } from '@/interfaces/project.interface'
 import Image from 'next/image'
 import { Code2, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import { AppIcon } from '../ui/AppIcon'
-import { Button } from '../ui/button'
+import { AppIcon } from '../../ui/AppIcon'
+import { Button } from '../../ui/button'
 import { useState } from 'react'
-import { AspectRatioImage } from '../AspectRatioImage/AspectRatioImage'
+import { AspectRatioImage } from '../../../containers/AspectRatioImage'
 
 interface ProjectCardItemProps {
     project: IProject,

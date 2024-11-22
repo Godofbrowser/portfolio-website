@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import { Card, CardContent } from "../../ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
 
-export function Skills() {
+export function SectionSkills() {
   const defaultTab= 'frontend'
   const skillCategories = {
     frontend: ["Vue", "NuxtJs", "React", "ReactNative", "NextJs", "Angular 2+", "Ionic", "TailwindCSS"],

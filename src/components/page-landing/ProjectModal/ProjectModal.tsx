@@ -6,14 +6,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "../../components/ui/dialog";
-import { Badge } from "../../components/ui/badge";
-import { Button } from "../../components/ui/button";
+} from "../../ui/dialog";
+import { Badge } from "../../ui/badge";
+import { Button } from "../../ui/button";
 import { Code2, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { IProject } from "@/interfaces/project.interface";
-import { AspectRatioImage } from "../AspectRatioImage/AspectRatioImage";
+import { AspectRatioImage } from "../../../containers/AspectRatioImage";
 
 interface ProjectModalProps {
   project: IProject;

@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createElement } from "react";
 import { motion } from "framer-motion";
-import { person, platformLinks } from '../../lib/constants'
+import { person, platformLinks } from '../../../lib/constants'
 
-const LandingIntro = () => {
+const SectionHero = () => {
      return (
        <section className="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
          {/* background section */}
@@ -45,4 +45,4 @@ const LandingIntro = () => {
      );
 }
 
-export { LandingIntro };
+export { SectionHero };
