@@ -53,14 +53,14 @@ const ProjectsSection = () => {
             >
               <TabsList className="grid w-full grid-cols-3">
                 {options.map(({ label, value }) => (
-                  <TabsTrigger key={value} value={value} className="capitalize">
+                  <TabsTrigger key={value} value={value} className="capitalize" aria-controls="projects-list">
                     {label}
                   </TabsTrigger>
                 ))}
               </TabsList>
             </Tabs>
 
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+            <div id="projects-list" className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
               {filteredProjects.map((project: IProject, index: number) => (
                 <motion.div
                   key={`${activeTab}-${project.title}`}
