@@ -69,10 +69,6 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
 }
 
 @layer components {
-  * {
-    @apply transition ease-in-out duration-200 motion-reduce:transition-none;
-  }
-
   .highlighted-text {
     @apply inline-block before:[content:'['] after:[content:']'] before:text-accent after:text-accent before:text-[1.1em] after:text-[1.1em] before:align-bottom;
   }

@@ -15,7 +15,7 @@ const DarkModeBtn = ({ className }: DarkModeBtnProps) => {
     return (
       <ClientComponent>
         <Button
-          className={cn(className || "", "[&_svg]:size-6")}
+          className={cn(className || "", "[&_svg]:size-6 [&_svg]:transition-transform [&_svg]:duration-100")}
           onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
           aria-label="Theme mode toggle"
           size="icon"
