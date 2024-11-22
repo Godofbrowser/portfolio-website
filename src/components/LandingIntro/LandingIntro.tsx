@@ -18,7 +18,7 @@ const LandingIntro = () => {
                {/* Links */}
                {platformLinks.map((pl) => (
                  <li key={pl.label} className="first:ml-0">
-                   <Link href={pl.link} className="hover:text-accent" aria-label={pl.label}>
+                   <Link href={pl.link} className="transition-colors duration-300 hover:text-accent" aria-label={pl.label}>
                      {createElement(pl.icon[0] as any, { className: 'size-6', ...pl.icon[1] })}
                    </Link>
                  </li>

@@ -8,6 +8,7 @@ import { ProjectsSection } from '@/components/ProjectsSection/ProjectsSection';
 import { disableHeaderNavigations, appTitle, navLinks, appUrl } from '../lib/constants'
 import { About } from './about';
 import { Skills } from './skills';
+import { MotionConfig } from 'framer-motion';
 
 const PlatformInfo = () => {
   console.log({
@@ -56,6 +57,7 @@ export default function Home() {
         </div>
       </header>
       <main>
+      <MotionConfig reducedMotion="user">
         <LandingIntro />
         <About />
         <Skills />
@@ -82,6 +84,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
+        </MotionConfig>
       </main>
     </>
   );
