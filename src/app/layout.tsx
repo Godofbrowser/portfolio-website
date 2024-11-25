@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID, hasGoneLive, isProduction } from '../lib/constants'
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,7 +79,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
       {isProduction ? (<GoogleAnalytics gaId={GA_TRACKING_ID} />) : null}
