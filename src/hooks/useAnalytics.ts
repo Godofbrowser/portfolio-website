@@ -11,7 +11,6 @@ export const useAnalytics = () => {
 
     const trackEvent = useCallback((eventName: string, properties = {}) => {
         try {
-            console.log('event', eventName, {...globalProperties, ...properties})
             isProduction && sendGAEvent('event', eventName, {...globalProperties, ...properties})
         } catch (e) {
             console.error('GA Error:', e)
