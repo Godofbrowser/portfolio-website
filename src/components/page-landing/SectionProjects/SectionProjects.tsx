@@ -3,10 +3,12 @@
 import { IProject, IProjectTabValue } from "@/interfaces/project.interface";
 import { projects } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import {useEffect, useMemo, useState} from "react";
 import { ProjectCardItem } from "../ProjectCardItem/ProjectCardItem";
 import { ProjectModal } from "../ProjectModal/ProjectModal";
 import { Tabs, TabsList, TabsTrigger } from "../../ui/tabs";
+import {useAnalytics} from "@/hooks/useAnalytics";
+import {EventName} from "@/interfaces/analytics";
 
 
 
@@ -18,9 +20,16 @@ const SectionProjects = () => {
     ], [])
     const [activeTab, setActiveTab] = useState<IProjectTabValue>(options[0].value)
     const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
+    const {trackEvent} = useAnalytics()
+
+    useEffect(() => {
+        if (!selectedProject) return
+        trackEvent(EventName.ProjectDetailClicked, { project: selectedProject?.title })
+    }, [selectedProject, trackEvent])
 
     const tabChangeHandler = (value: IProjectTabValue) => {
       setActiveTab(value);
+      trackEvent(EventName.ProjectTabSelected, { tab: value })
     }
 
     const filteredProjects = useMemo(() => {
@@ -48,7 +57,7 @@ const SectionProjects = () => {
           <div>
             <Tabs
               defaultValue={activeTab}
-              onValueChange={($event: any) => tabChangeHandler($event)}
+              onValueChange={($event: string) => tabChangeHandler($event as IProjectTabValue)}
               className="max-w-3xl mx-auto mb-8"
             >
               <TabsList className="grid w-full grid-cols-3">

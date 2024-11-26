@@ -5,6 +5,9 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { AppIcon } from "./AppIcon";
 import { Button } from "./button";
+import {useAnalytics} from "@/hooks/useAnalytics";
+import {useCallback} from "react";
+import {EventName} from "@/interfaces/analytics";
 
 export interface DarkModeBtnProps {
     className?: string;
@@ -12,11 +15,18 @@ export interface DarkModeBtnProps {
 
 const AppModeToggle = ({ className }: DarkModeBtnProps) => {
     const { theme, setTheme } = useTheme()
+    const {trackEvent} = useAnalytics()
+    const toggleHandler = useCallback(() => {
+        const nextTheme = theme == "dark" ? "light" : "dark"
+        setTheme(nextTheme)
+        trackEvent(EventName.ThemeModeToggled, { prev_theme: theme, next_theme: nextTheme })
+    }, [theme, trackEvent, setTheme])
+
     return (
       <ClientComponent>
         <Button
           className={cn(className || "", "[&_svg]:size-6 [&_svg]:transition-transform [&_svg]:duration-100")}
-          onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
+          onClick={toggleHandler}
           aria-label="Theme mode toggle"
           size="icon"
           variant="ghost"

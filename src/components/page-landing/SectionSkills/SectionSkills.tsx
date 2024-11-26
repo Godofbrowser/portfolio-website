@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "../../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
+import {useAnalytics} from "@/hooks/useAnalytics";
+import {EventName} from "@/interfaces/analytics";
 
 export function SectionSkills() {
   const defaultTab= 'frontend'
@@ -11,8 +13,8 @@ export function SectionSkills() {
     backend: ["Laravel (PHP)", "NestJs (NodeJs)", "Prompt Engineering", "SQL DB", "NoSQL DB", "TypeORM", "ObjectionORM", "EloquentORM"],
     devOps: ["Docker", "Codemagic", "Appflow", "Azure pipelines", "AWS", "GCP", "Github Actions", "Heroku"],
     tools: ["Typescript", "Webpack", "Rollup", "Vite", "Elastic Search", "LLM", "GraphQL"]
-
   };
+  const {trackEvent} = useAnalytics()
 
   return (
     <section id="skills" className="py-20">
@@ -38,7 +40,11 @@ export function SectionSkills() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="transition-none"
       >
-        <Tabs defaultValue={defaultTab} className="max-w-3xl mx-auto">
+        <Tabs
+            defaultValue={defaultTab}
+            className="max-w-3xl mx-auto"
+            onValueChange={($event: string) => trackEvent(EventName.SkillsTabSelected, { tab: $event })}
+        >
           <TabsList className="grid w-full grid-cols-4">
             {Object.keys(skillCategories).map(label => (
               <TabsTrigger key={label} value={label} className="capitalize">{label}</TabsTrigger>
