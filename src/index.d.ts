@@ -1,5 +1,7 @@
 import * as React from "react";
 
+declare module 'gsap';
+
 declare module 'react-vertical-timeline-component' {
     export interface VerticalTimelineProps {
         animate?: boolean | undefined;
