@@ -77,3 +77,26 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
     @apply inline-block relative before:absolute before:[content:'_'] before:bg-accent before:inline-block before:h-1 before:w-2/3 before:-bottom-2 before:left-1/2 before:-translate-x-1/2;
   }
 }
+
+/**
+ * This package is difficult to customize using tailwind, perhaps I should make a PR for the following:
+ * - More use of css variables to allow for easy theming
+ * - Somehow the class is-hidden remains and hides content, forcing me to use visible={true} prop
+ */
+.vertical-timeline-element-content {
+  /*@apply bg-muted;*/ /* see? doesn't work */
+  background: hsl(var(--muted)) !important;
+}
+.vertical-timeline-element-content-arrow {
+  border-right-color: hsl(var(--muted)) !important;
+}
+
+.vertical-timeline::before {
+  --line-color: hsl(var(--accent)) !important;
+}
+
+.vertical-timeline-element-icon {
+  background: hsl(var(--accent-foreground)) !important;
+  color: hsl(var(--accent)) !important;
+  box-shadow: 0 0 0 4px hsl(var(--accent)),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05) !important;
+}

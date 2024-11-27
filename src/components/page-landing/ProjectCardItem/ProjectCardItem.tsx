@@ -2,10 +2,8 @@ import { IProject } from '@/interfaces/project.interface'
 import Image from 'next/image'
 import { Code2, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import { AppIcon } from '../../ui/AppIcon'
 import { Button } from '../../ui/button'
-import { useState } from 'react'
-import { AspectRatioImage } from '../../../containers/AspectRatioImage'
+import { AspectRatioImage } from '@/containers/AspectRatioImage'
 
 interface ProjectCardItemProps {
     project: IProject,
@@ -78,7 +76,7 @@ const ProjectCardItem = ({ project, onClick }: ProjectCardItemProps) => {
               )}
 
               <Button variant="ghost" size="sm" className="ml-auto">
-                Details & Role
+                See more
               </Button>
             </div>
           </div>

@@ -2,44 +2,6 @@
 
 exports[`Page renders homepage unchanged 1`] = `
 <div>
-  <header
-    class="fixed top-0 left-0 w-full z-[1000] bg-background dark:bg-background shadow-[0px_6px_10px_-5px_rgba(0,0,0,0.3)]"
-    data-testid="page-header"
-  >
-    <div
-      class="h-16 flex items-center xl:container xl:mx-auto xl:px-6 px-4"
-    >
-      <h1
-        class="text-xl font-semibold"
-      >
-        Portfolio
-      </h1>
-      <button
-        aria-label="Theme mode toggle"
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-9 w-9 ml-auto [&_svg]:size-6 [&_svg]:transition-transform [&_svg]:duration-100"
-      >
-        <svg
-          class="size-6 scale-100 rotate-0 dark:scale-0 dark:-rotate-90"
-        >
-          <use
-            xlink:href="/icon-sprite.svg#moon"
-          />
-        </svg>
-        <svg
-          class="size-6 absolute scale-0 rotate-90 dark:rotate-0 dark:scale-100"
-        >
-          <use
-            xlink:href="/icon-sprite.svg#sun"
-          />
-        </svg>
-        <span
-          class="sr-only"
-        >
-          Toggle theme
-        </span>
-      </button>
-    </div>
-  </header>
   <main>
     <section
       class="relative min-h-[500px] md:min-h-[740px] mt-16 md:flex md:justify-center md:items-center"
@@ -590,6 +552,233 @@ exports[`Page renders homepage unchanged 1`] = `
       </div>
     </section>
     <section
+      class="relative py-12"
+    >
+      <div
+        class="text-center mb-12 transition-none"
+        style="opacity: 0; transform: translateY(50px);"
+      >
+        <h2
+          class="highlighted-heading text-3xl font-bold mb-4"
+        >
+          Professional Experience
+        </h2>
+        <p
+          class="text-muted-foreground max-w-2xl mx-auto"
+        >
+          Experienced in on-site, hybrid, and remote collaborations, I consistently deliver high-quality, maintainable solutions
+        </p>
+      </div>
+      <div
+        class="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns"
+      >
+        <div
+          class="vertical-timeline-element"
+          id=""
+        >
+          <span
+            class="vertical-timeline-element-icon bounce-in"
+          >
+            <svg
+              class="size-6"
+            >
+              <use
+                xlink:href="/icon-sprite.svg#github"
+              />
+            </svg>
+          </span>
+          <div
+            class="vertical-timeline-element-content bounce-in"
+          >
+            <div
+              class="vertical-timeline-element-content-arrow"
+            />
+            <h3
+              class="vertical-timeline-element-title font-bold text-xl"
+            >
+              Senior Fullstack Software Developer
+            </h3>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Freelance
+            </h4>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Lagos, NG
+               (
+              remote
+              )
+            </h4>
+            <p
+              class="text-muted-foreground"
+            >
+              Vue.js, VuePress, Web Extensions (WXT), Web Components, Next.js, Netlify, Stripe API
+            </p>
+            <span
+              class="vertical-timeline-element-date"
+            >
+              2024 – Present
+            </span>
+          </div>
+        </div>
+        <div
+          class="vertical-timeline-element"
+          id=""
+        >
+          <span
+            class="vertical-timeline-element-icon bounce-in"
+          >
+            <svg
+              class="size-6"
+            >
+              <use
+                xlink:href="/icon-sprite.svg#github"
+              />
+            </svg>
+          </span>
+          <div
+            class="vertical-timeline-element-content bounce-in"
+          >
+            <div
+              class="vertical-timeline-element-content-arrow"
+            />
+            <h3
+              class="vertical-timeline-element-title font-bold text-xl"
+            >
+              Senior Fullstack Software Developer
+            </h3>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Lew Innovation
+            </h4>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Australia
+               (
+              remote
+              )
+            </h4>
+            <p
+              class="text-muted-foreground"
+            >
+              Vue.js, Quasar, Node.js, TypeORM, TypeScript, ElasticSearch, AWS, Laravel, React, Next.js, React Native
+            </p>
+            <span
+              class="vertical-timeline-element-date"
+            >
+              2021 – 2024
+            </span>
+          </div>
+        </div>
+        <div
+          class="vertical-timeline-element"
+          id=""
+        >
+          <span
+            class="vertical-timeline-element-icon bounce-in"
+          >
+            <svg
+              class="size-6"
+            >
+              <use
+                xlink:href="/icon-sprite.svg#github"
+              />
+            </svg>
+          </span>
+          <div
+            class="vertical-timeline-element-content bounce-in"
+          >
+            <div
+              class="vertical-timeline-element-content-arrow"
+            />
+            <h3
+              class="vertical-timeline-element-title font-bold text-xl"
+            >
+              Senior Frontend Developer (Architect)
+            </h3>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              ITCraftship (acquired by Nursa)
+            </h4>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Poland
+               (
+              remote
+              )
+            </h4>
+            <p
+              class="text-muted-foreground"
+            >
+              Ionic, Angular, Next.js, Prismic
+            </p>
+            <span
+              class="vertical-timeline-element-date"
+            >
+              2020 – 2022
+            </span>
+          </div>
+        </div>
+        <div
+          class="vertical-timeline-element"
+          id=""
+        >
+          <span
+            class="vertical-timeline-element-icon bounce-in"
+          >
+            <svg
+              class="size-6"
+            >
+              <use
+                xlink:href="/icon-sprite.svg#github"
+              />
+            </svg>
+          </span>
+          <div
+            class="vertical-timeline-element-content bounce-in"
+          >
+            <div
+              class="vertical-timeline-element-content-arrow"
+            />
+            <h3
+              class="vertical-timeline-element-title font-bold text-xl"
+            >
+              Software Developer
+            </h3>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Parkway Projects LTD
+            </h4>
+            <h4
+              class="vertical-timeline-element-subtitle text-muted-foreground"
+            >
+              Nigeria
+               (
+              hybrid
+              )
+            </h4>
+            <p
+              class="text-muted-foreground"
+            >
+              Vue.js, SCSS, JavaScript, HTML5
+            </p>
+            <span
+              class="vertical-timeline-element-date"
+            >
+              2019 – 2020
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
       class="py-16"
       id="projects"
     >
@@ -789,7 +978,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -941,7 +1130,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1064,7 +1253,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1216,7 +1405,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1363,7 +1552,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1486,7 +1675,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1634,7 +1823,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1776,7 +1965,7 @@ exports[`Page renders homepage unchanged 1`] = `
                       <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
                       >
-                        Details & Role
+                        See more
                       </button>
                     </div>
                   </div>
@@ -1787,85 +1976,6 @@ exports[`Page renders homepage unchanged 1`] = `
         </div>
       </div>
     </section>
-    <footer
-      class=""
-      data-testid="page-footer"
-    >
-      <div
-        class="container px-4 mx-auto p-3 py-16 relative before:top-0 before:left-[15px] before:absolute before:w-[calc(100%-30px)] before:h-px before:bg-slate-300"
-      >
-        <div
-          class="flex flex-col lg:flex-row-reverse justify-between"
-        >
-          <ul
-            class="flex justify-center max-lg:mb-8"
-          >
-            <li
-              class="ml-2 first:ml-0"
-            >
-              <a
-                class="highlighted-text"
-                href="https://medium.com/@ejjay"
-                target="_blank"
-              >
-                Articles
-              </a>
-            </li>
-            <li
-              class="ml-2 first:ml-0"
-            >
-              <a
-                class="highlighted-text"
-                href="https://docs.google.com/document/d/e/2PACX-1vRBaSJImuHYeHooFXol99o1oZa43QEuKFvJtqs8FofyIcpTnXnAYGt0cQQ5xkdwlA/pub"
-                target="_blank"
-              >
-                Resume
-              </a>
-            </li>
-            <li
-              class="ml-2 first:ml-0"
-            >
-              <a
-                class="highlighted-text"
-                href="https://www.upwork.com/freelancers/~01e4ba9941a5659bb3"
-                target="_blank"
-              >
-                Hire me
-              </a>
-            </li>
-          </ul>
-          <p
-            class="max-lg:text-center leading-loose"
-          >
-            Copyright © 2024
-            <span>
-               - 
-            </span>
-            <a
-              href="https://github.com/Godofbrowser"
-            >
-              <span
-                class="highlighted-text"
-              >
-                godofbrowser
-              </span>
-            </a>
-             
-            <span
-              class="max-sm:hidden"
-            >
-              |
-            </span>
-             
-            <span
-              class="whitespace-nowrap max-sm:block"
-            >
-              Don't hesitate to reach out.
-            </span>
-          </p>
-        </div>
-      </div>
-    </footer>
   </main>
 </div>
 `;

@@ -3,6 +3,7 @@ import { SectionProjects } from '@/components/page-landing/SectionProjects/Secti
 import { SectionAbout } from '@/components/page-landing/SectionAbout/SectionAbout';
 import { SectionSkills } from '@/components/page-landing/SectionSkills/SectionSkills';
 import { MotionConfig } from 'framer-motion';
+import {SectionExperience} from "@/components/page-landing/SectionExperience";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
           <SectionHero />
           <SectionAbout />
           <SectionSkills />
+          <SectionExperience />
           <SectionProjects />
         </MotionConfig>
       </main>
