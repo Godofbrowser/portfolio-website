@@ -6,20 +6,20 @@ import Layout from './layout'
 
 
 describe("Layout", () => {
-    it.only("renders layout unchanged", () => {
-        const { container } = render(<Layout><main /></Layout>, { container: document, hydrate: true });
+    it("renders layout unchanged", () => {
+        const { container } = render(<Layout><main /></Layout>);
         expect(container).toMatchSnapshot();
     });
 
     it("renders a header", () => {
         render(<Layout><main /></Layout>);
-        const header = screen.getByTestId("page-header", { container: document, hydrate: true });
+        const header = screen.getByTestId("page-header");
         expect(header).toBeInTheDocument();
     });
 
     it("renders a footer", () => {
         render(<Layout><main /></Layout>);
-        const heading = screen.getByTestId("page-footer", { container: document, hydrate: true });
+        const heading = screen.getByTestId("page-footer");
         expect(heading).toBeInTheDocument();
     });
 });
