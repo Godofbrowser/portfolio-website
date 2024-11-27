@@ -1972,6 +1972,119 @@ exports[`Page renders homepage unchanged 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              class="transition-none"
+              style="opacity: 0; transform: translateY(20px);"
+            >
+              <div
+                class="overflow-hidden border border-slate-300 rounded-lg h-full min-h-[300px] cursor-pointer transition-transform hover:scale-[1.02]"
+              >
+                <div
+                  class="flex flex-col h-full"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="relative w-full min-h-1 overflow-hidden bg-slate-100"
+                      style="background-color: rgb(234, 88, 33);"
+                    >
+                      <img
+                        alt="portfolio project"
+                        class="object-contain object-center"
+                        data-nimg="fill"
+                        decoding="async"
+                        loading="lazy"
+                        sizes="100vw"
+                        src="/_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=3840&q=75"
+                        srcset="/_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fportfolio%2Fkinderling%2Fpreview1.webp&w=3840&q=75 3840w"
+                        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="p-3"
+                  >
+                    <h3
+                      class="text-xl font-medium mb-3"
+                    >
+                      Kinderling
+                    </h3>
+                    <p
+                      class="flex flex-wrap gap-2 mb-3"
+                    >
+                      <span
+                        class="px-2 py-1 bg-muted rounded-full text-xs"
+                      >
+                        React
+                      </span>
+                      <span
+                        class="px-2 py-1 bg-muted rounded-full text-xs"
+                      >
+                        ReactNative
+                      </span>
+                      <span
+                        class="px-2 py-1 bg-muted rounded-full text-xs"
+                      >
+                        mobx
+                      </span>
+                      <span
+                        class="px-2 py-1 bg-muted rounded-full text-xs"
+                      >
+                        Typescript
+                      </span>
+                    </p>
+                    <p
+                      class="max-sm:text-sm text-muted-foreground"
+                    >
+                      Kinderling is a platform that enables families to enjoy every exclusive episode of their favourite Kinderling podcast
+                    </p>
+                  </div>
+                  <div
+                    class="mt-auto p-3"
+                  >
+                    <div
+                      class="flex gap-4"
+                    >
+                      <a
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+                        href="https://www.kinderlingkids.com/"
+                        target="_blank"
+                      >
+                        <svg
+                          class="lucide lucide-external-link mr-2 h-4 w-4"
+                          fill="none"
+                          height="24"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 3h6v6"
+                          />
+                          <path
+                            d="M10 14 21 3"
+                          />
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          />
+                        </svg>
+                        Reference
+                      </a>
+                      <button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transition-colors duration-300 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs ml-auto"
+                      >
+                        See more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
