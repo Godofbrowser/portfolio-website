@@ -351,4 +351,41 @@ export const projects: IProject[] = [
       },
     ]
   },
+  {
+    title: 'Kinderling',
+    tags: [],
+    tech: ['React', 'ReactNative', 'mobx', 'Typescript'],
+    links: {
+      reference: 'https://www.kinderlingkids.com/',
+    },
+    description: 'Kinderling is a platform that enables families to enjoy every exclusive episode of their favourite Kinderling podcast',
+    role: 'During my time working on the Kinderling React Native app, I developed new user interfaces and features to enhance the app’s functionality and user experience. I wrote shell scripts to streamline the export of user and subscription data, facilitating a smooth transition for users to Spotify and Apple Play. Additionally, as the app was scheduled for discontinuation, I designed and implemented configurable modules to enable partial and permanent remote shutdown of the app, ensuring a controlled and efficient decommissioning process. My contributions demonstrated versatility in both feature development and system lifecycle management',
+    features: [
+      "React Native-Based Mobile Platform for a seamless and responsive cross-platform experience",
+      "Podcast Streaming with access to a wide variety of podcasts",
+      "Beautiful and Intuitive UI for an engaging and straightforward interface",
+      "Premium Membership Subscription with exclusive features and content",
+      "Cross-Platform Compatibility offering a consistent experience on iOS and Android"
+    ],
+    images: [
+      {
+        url: `${imageBase}/images/portfolio/kinderling/preview1.webp`,
+        bgColor: '#ea5821',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/kinderling/preview2.webp`,
+        bgColor: '#eceef4',
+        width: 0,
+        height: 0,
+      },
+      {
+        url: `${imageBase}/images/portfolio/kinderling/preview3.webp`,
+        bgColor: '#eceef4',
+        width: 0,
+        height: 0,
+      },
+    ],
+  },
 ];
