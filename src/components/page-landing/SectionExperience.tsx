@@ -130,9 +130,9 @@ const SectionExperience: React.FC = () => {
                 icon={<AppIcon name="desk" />}
                 visible
             >
-              <h3 className="vertical-timeline-element-title font-bold text-xl">{exp.position}</h3>
-              <h4 className="vertical-timeline-element-subtitle text-muted-foreground">{exp.organization}</h4>
-              <h4 className="vertical-timeline-element-subtitle text-muted-foreground">{exp.location} ({exp.type})</h4>
+              <h3 className="font-bold text-xl">{exp.position}</h3>
+              <h4 className="text-muted-foreground">{exp.organization}</h4>
+              <h4 className="text-muted-foreground">{exp.location} ({exp.type})</h4>
               <p className="text-muted-foreground">
                 {exp.techTools.join(', ')}
               </p>
