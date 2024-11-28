@@ -74,7 +74,42 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   }
 
   .highlighted-heading {
-    @apply inline-block relative before:absolute before:[content:'_'] before:bg-accent before:inline-block before:h-1 before:w-2/3 before:-bottom-2 before:left-1/2 before:-translate-x-1/2;
+    @apply inline-block relative mb-8 before:absolute before:[content:'_'] before:bg-accent before:inline-block before:h-1 before:w-2/3 before:-bottom-3 before:left-1/2 before:-translate-x-1/2;
+  }
+  .highlighted-heading:before {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, transparent, hsl(var(--accent)) 50%, transparent);
+  }
+
+  .glowing-border {
+    position: relative;
+  }
+  .glowing-border:before {
+    @apply rounded-2xl;
+    --size: 4px;
+    --angle: 120deg;
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + var(--size) + var(--size));
+    height: calc(100% + var(--size) + var(--size));
+    background-color: transparent;
+    z-index: -1;
+    transform: translate(calc(-1 * var(--size)), calc(-1 * var(--size)));
+    background-image: conic-gradient(from var(--angle), #f7ff0a50, hsl(var(--accent)), #f7ff0a50);
+  }
+
+  .glowing-border:after {
+    filter: blur(1rem);
+    opacity: 0.8;
+  }
+
+  .glowing-border--animated:before {
+    animation: rotate-border 2s linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -99,4 +134,25 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   background: hsl(var(--accent-foreground)) !important;
   color: hsl(var(--accent)) !important;
   box-shadow: 0 0 0 4px hsl(var(--accent)),inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05) !important;
+}
+
+@property --size {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate-border {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
 }

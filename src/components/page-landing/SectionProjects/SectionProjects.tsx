@@ -47,7 +47,7 @@ const SectionProjects = () => {
         >
           <div className="text-center">
 
-            <h2 className="highlighted-heading text-3xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="highlighted-heading text-3xl font-bold">Featured Projects</h2>
 
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             With extensive experience across diverse domains, programming languages, frameworks, and tools, I have successfully delivered numerous projects throughout my career as a full-stack software engineer. Below are a select few highlights from the many projects I have completed professionally.

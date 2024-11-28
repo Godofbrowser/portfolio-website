@@ -116,7 +116,7 @@ const SectionExperience: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 transition-none"
       >
-        <h2 className="highlighted-heading text-3xl font-bold mb-4">Professional Experience</h2>
+        <h2 className="highlighted-heading text-3xl font-bold">Professional Experience</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Experienced in on-site, hybrid, and remote collaborations, I consistently deliver high-quality, maintainable solutions
         </p>

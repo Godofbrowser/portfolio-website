@@ -37,7 +37,7 @@ export function SectionAbout() {
           layout
           className="text-center mb-12 transition-none"
         >
-          <h2 className="highlighted-heading text-3xl font-bold mb-4">About Me</h2>
+          <h2 className="highlighted-heading text-3xl font-bold">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {person.about}
           </p>
@@ -53,7 +53,7 @@ export function SectionAbout() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="transition-none"
             >
-              <Card className="h-full">
+              <Card className="h-full border-none glowing-border">
                 <CardContent className="pt-6">
                   <div className="text-primary mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold mb-2">

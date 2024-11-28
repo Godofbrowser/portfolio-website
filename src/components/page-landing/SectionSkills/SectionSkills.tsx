@@ -26,7 +26,7 @@ export function SectionSkills() {
         transition={{ duration: 0.5 }}
         className="text-center mb-12 transition-none"
       >
-        <h2 className="highlighted-heading text-3xl font-bold mb-4">Skills & Technologies</h2>
+        <h2 className="highlighted-heading text-3xl font-bold">Skills & Technologies</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           I work with a variety of technologies across the full stack, always
           keeping up with the latest trends and best practices.
