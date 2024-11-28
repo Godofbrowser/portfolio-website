@@ -13,7 +13,7 @@ import {scrollToElement} from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const SectionHero = forwardRef((props, ref) => {
+const SectionHero = forwardRef((_, ref) => {
     const scroll = (e) => {
         e.preventDefault()
         scrollToElement(e.currentTarget.attributes.href.value, 1000)
@@ -75,9 +75,10 @@ const SectionHero = forwardRef((props, ref) => {
 })
 SectionHero.displayName = 'SectionHero'
 
-const AnimatedSectionHero = ({props}) => {
+const AnimatedSectionHero = () => {
     const ref = useRef()
     const timelineRef = useRef<gsap.core.Timeline>()
+
 
     useGSAP(() => {
         if (!ref.current) return
@@ -89,7 +90,7 @@ const AnimatedSectionHero = ({props}) => {
         const timeline = timelineRef.current = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionElement,
-                start: 'bottom bottom',
+                start: `top top`,
                 end: 'bottom top',
                 scrub: true,
                 snap: {snapTo: 1, inertia: false, delay: .6, duration: 1, ease: "sine.out"},
@@ -129,7 +130,7 @@ const AnimatedSectionHero = ({props}) => {
     })
 
     return (
-        <SectionHero {...props} ref={ref}/>
+        <SectionHero ref={ref}/>
     )
 }
 

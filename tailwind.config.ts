@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import plugin from 'tailwindcss/plugin'
 
+export const WIDESCREEN_QUERY = '(min-aspect-ratio: 3/2)'
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -71,7 +73,7 @@ const config: Config = {
   plugins: [
     require("tailwindcss-animate"),
     plugin(function({ addVariant }) {
-      addVariant('widescreen', '@media (min-aspect-ratio: 3/2)')
+      addVariant('widescreen', `@media ${WIDESCREEN_QUERY}`)
       addVariant('tallscreen', '@media (min-aspect-ratio: 13/20)')
     })
   ],
