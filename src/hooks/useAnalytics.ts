@@ -1,6 +1,6 @@
 import { sendGAEvent } from '@next/third-parties/google'
 import {useCallback, useMemo} from "react";
-import {isProduction} from "@/lib/constants";
+import {isProduction} from "@/constants";
 import pkg from '../../package.json'
 
 export const useAnalytics = () => {

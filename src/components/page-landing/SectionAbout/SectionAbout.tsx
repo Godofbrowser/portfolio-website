@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "../../ui/card";
 import { Code2, Server, Rocket } from "lucide-react";
-import { person } from "@/lib/constants";
+import { person } from "@/constants";
 
 export function SectionAbout() {
   const services = [

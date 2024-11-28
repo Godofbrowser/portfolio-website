@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/containers/ThemeProvider";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from "next/font/google";
-import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID, hasGoneLive, isProduction } from '@/lib/constants'
+import { appDescription, person, appTitle, appUrl, GA_TRACKING_ID, hasGoneLive, isProduction } from '@/constants'
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";

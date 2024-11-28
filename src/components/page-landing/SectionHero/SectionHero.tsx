@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {createElement, forwardRef, useRef} from "react";
 import {motion} from "framer-motion";
-import {person, platformLinks} from '@/lib/constants'
+import {person, platformLinks} from '@/constants'
 
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
@@ -16,7 +16,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const SectionHero = forwardRef((props, ref) => {
     const scroll = (e) => {
         e.preventDefault()
-        scrollToElement('#about', 2000)
+        scrollToElement(e.currentTarget.attributes.href.value, 1000)
     }
     return (
         <section id="hero"
@@ -27,7 +27,7 @@ const SectionHero = forwardRef((props, ref) => {
 
             <div
                 className="hidden widescreen:flex items-center justify-center absolute bottom-10 left-1/2 -translate-x-1/2">
-                <Link href="#about" onClick={scroll} scroll={false}>
+                <Link href="#about" onClick={scroll}>
                     <div className="flex flex-col items-center space-y-2 cursor-pointer">
                         <span className="text-muted-foreground sr-only">Scroll Down</span>
                         <div
@@ -91,7 +91,7 @@ const AnimatedSectionHero = ({props}) => {
                 trigger: sectionElement,
                 start: 'bottom bottom',
                 end: 'bottom top',
-                scrub: 1,
+                scrub: true,
                 snap: {snapTo: 1, inertia: false, delay: .6, duration: 1, ease: "sine.out"},
                 // markers: true,
             },

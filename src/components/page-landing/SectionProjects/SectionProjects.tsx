@@ -1,7 +1,7 @@
 "use client";
 
 import { IProject, IProjectTabValue } from "@/interfaces/project.interface";
-import { projects } from "@/lib/constants";
+import { projects } from "@/constants";
 import { motion } from "framer-motion";
 import {useEffect, useMemo, useState} from "react";
 import { ProjectCardItem } from "../ProjectCardItem/ProjectCardItem";

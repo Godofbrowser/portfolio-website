@@ -1,4 +1,4 @@
-import { appTitle, disableHeaderNavigations, navLinks } from "@/lib/constants";
+import { appTitle, disableHeaderNavigations, navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "./ui/button";
