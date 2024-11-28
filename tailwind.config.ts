@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   darkMode: ["class"],
@@ -67,6 +68,12 @@ const config: Config = {
       }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function({ addVariant }) {
+      addVariant('widescreen', '@media (min-aspect-ratio: 3/2)')
+      addVariant('tallscreen', '@media (min-aspect-ratio: 13/20)')
+    })
+  ],
 };
 export default config;

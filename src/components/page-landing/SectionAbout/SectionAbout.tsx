@@ -43,7 +43,7 @@ export function SectionAbout() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-3 gap-6 mt-12 mx-auto max-w-7xl">
           {services.map((service, index) => (
             <motion.div
               key={index}

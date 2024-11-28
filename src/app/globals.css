@@ -111,6 +111,12 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
     animation-direction: normal;
     animation-iteration-count: infinite;
   }
+
+  .animated-scroll-down {
+    animation: animated-scroll-down 1.5s ease-out;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+  }
 }
 
 /**
@@ -154,5 +160,21 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   }
   100% {
     --angle: 360deg;
+  }
+}
+
+@keyframes animated-scroll-down {
+  0% {
+    transform: translateY(-10px) rotate(225deg);
+    opacity: 0;
+  }
+
+  20%, 80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(10px) rotate(225deg);
+    opacity: 0;
   }
 }

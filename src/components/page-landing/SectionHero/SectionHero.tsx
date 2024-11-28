@@ -8,9 +8,19 @@ import { person, platformLinks } from '@/lib/constants'
 
 const SectionHero = () => {
      return (
-       <section className="relative min-h-[500px] lg:min-h-[740px] mt-16 md:flex md:justify-center md:items-center">
+       <section className="relative min-h-[500px] widescreen:h-[100vh] sm:min-h-[600px] pt-16 md:flex md:justify-center md:items-center">
          {/* background section */}
          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/spiral-bg-light.webp')] bg-cover bg-no-repeat bg-fixed [background-position:50%_center] dark:opacity-15"></div>
+         
+         <div className="hidden widescreen:flex items-center justify-center absolute bottom-10 left-1/2 -translate-x-1/2">
+          <a href="#about">
+            <div className="flex flex-col items-center space-y-2 cursor-pointer">
+              <span className="text-muted-foreground sr-only">Scroll Down</span>
+              <div className="w-6 h-6 border-b-4 border-r-4 border-muted-foreground rotate-45 animated-scroll-down"></div>
+            </div>
+          </a>
+        </div>
+
          <div className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[repeat(2,max-content)] max-md:pt-20 md:gap-12 px-6">
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
