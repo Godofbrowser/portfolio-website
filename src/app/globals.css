@@ -65,6 +65,7 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   }
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth !important;
   }
 }
 
@@ -136,6 +137,12 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
   --line-color: hsl(var(--accent)) !important;
 }
 
+.vertical-timeline-element-icon svg {
+  width: 2rem !important;
+  height: 2rem !important;
+  margin: 0 !important;
+  transform: translate3D(-50%, -50%, 0);
+}
 .vertical-timeline-element-icon {
   background: hsl(var(--accent-foreground)) !important;
   color: hsl(var(--accent)) !important;
@@ -164,7 +171,7 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
 }
 
 @keyframes animated-scroll-down {
-  0% {
+  0%, 10% {
     transform: translateY(-10px) rotate(225deg);
     opacity: 0;
   }

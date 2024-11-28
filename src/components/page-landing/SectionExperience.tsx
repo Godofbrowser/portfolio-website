@@ -127,7 +127,7 @@ const SectionExperience: React.FC = () => {
             <VerticalTimelineElement
                 key={`${exp.organization}:${exp.period}`}
                 date={exp.period}
-                icon={<AppIcon name="github" />}
+                icon={<AppIcon name="desk" />}
                 visible
             >
               <h3 className="vertical-timeline-element-title font-bold text-xl">{exp.position}</h3>
