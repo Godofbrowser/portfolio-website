@@ -29,7 +29,7 @@ const SectionHero = () => {
             className="size-32 sm:size-44 md:size-48 lg:size-56"
           >
             <div className="overflow-hidden rounded-full size-full shadow-md bg-background">
-              <Image width={640} height={640} src={person.userPhoto} alt={person.userFullName} />
+              <Image width={640} height={640} src={person.userPhoto} alt={person.userFullName} priority />
             </div>
           </motion.div>
           <motion.div
