@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, {createElement, forwardRef, MutableRefObject, useRef} from "react";
+import React, {createElement, forwardRef, MutableRefObject, useCallback, useRef} from "react";
 import {motion} from "framer-motion";
 import {person, platformLinks} from '@/constants'
 
@@ -10,6 +10,8 @@ import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {scrollToElement} from "@/lib/utils";
+import { AppSplitType } from "@/components/ui/AppSplitType";
+import { useSplitType } from "@/hooks/useSplitType";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -43,9 +45,9 @@ const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
             <div ref={ref}
                  className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[repeat(2,max-content)] max-md:pt-20 md:gap-12 px-6">
                 <motion.div
-                    initial={{scale: 0.9, opacity: 0}}
+                    initial={{scale: 1.4, opacity: 0}}
                     animate={{scale: 1, opacity: 1}}
-                    transition={{duration: 0.3}}
+                    transition={{duration: 0.3, delay: 1, type: "spring", stiffness: 220, bounce: 0.5, mass: 1.2 }}
                     className="size-32 sm:size-44 md:size-48 lg:size-56"
                 >
                     <div className="overflow-hidden rounded-full size-full shadow-md bg-background">
@@ -70,7 +72,9 @@ const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
                             </li>
                         ))}
                     </ul>
-                    <h1 className="text-5xl sm:text-7xl md:text-6xl lg:text-8xl md:mt-6 font-bold leading-relaxed [grid-area:name] min-[365px]:highlighted-text">{person.userFullName}</h1>
+                    <h1 className="helper--hero-text-gsap relative text-5xl sm:text-7xl md:text-6xl lg:text-8xl md:mt-6 font-bold leading-relaxed [grid-area:name] min-[365px]:highlighted-text">
+                      <AppSplitType className="user-full-name" text={person.userFullName} />
+                    </h1>
                     <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{person.userHeadline}</p>
                 </motion.div>
             </div>
@@ -80,8 +84,55 @@ const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
 SectionHero.displayName = 'SectionHero'
 
 const AnimatedSectionHero = () => {
+  const { contextSafe } = useGSAP();
+
     const ref = useRef<HTMLDivElement | null>(null)
     const timelineRef = useRef<gsap.core.Timeline>()
+
+    useSplitType('user-full-name', () => {
+      contextSafe(() => {
+        const primaryElement = ref.current
+        if (primaryElement === null) return
+  
+        const tl1 = gsap.timeline({ duration: .3, delay: 1, ease: 'power4.inOut', })
+        tl1.from(primaryElement.querySelector('.user-full-name'), {
+          width: 50,
+          duration: .3,
+          delay: 1,
+          onComplete() {
+            const node = primaryElement.querySelector('.user-full-name')
+            node.style.width = ''
+            node?.closest('h1')?.classList.toggle('helper--hero-text-gsap')
+          }
+        }, '<')
+        tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
+          // y: '50',
+          scale: 0.4,
+          opacity: 0,
+          stagger: {
+            each: 0.03,
+            from: 'center',
+            ease: 'power4.inOut',
+          }
+        }, '<')
+        tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
+          color: '#f26140',
+          stagger: {
+            each: 0.03,
+            from: 'center',
+            ease: 'power4.inOut',
+          }
+        }, '-=0')
+
+        tl1.eventCallback('onComplete', () => {
+          tl1.clear()
+          tl1.kill()
+          // This will reset the color to react with theme switching.
+          primaryElement.querySelectorAll('.user-full-name .char').forEach(e => (e.style.color = ''))
+        })
+        return () => tl1.kill()
+      })()
+    })
 
 
     useGSAP(() => {
@@ -131,10 +182,12 @@ const AnimatedSectionHero = () => {
             timeline.clear()
             setTimelines()
         })
+
+        return () => timeline.kill()
     })
 
     return (
-        <SectionHero ref={ref}/>
+        <SectionHero ref={ref} />
     )
 }
 

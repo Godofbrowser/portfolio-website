@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
+import { SplitTypeContextProvider } from "@/context/split-type.context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -79,9 +80,11 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
-          <Header />
-          {children}
-          <Footer />
+          <SplitTypeContextProvider>
+            <Header />
+            {children}
+            <Footer />
+          </SplitTypeContextProvider>
         </ThemeProvider>
       </body>
       {isProduction ? (<GoogleAnalytics gaId={GA_TRACKING_ID} />) : null}

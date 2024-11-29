@@ -118,6 +118,28 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
     animation-direction: reverse;
     animation-iteration-count: infinite;
   }
+
+  /* These styles are needed initially for smoother animation.
+   After which the class is removed at the end of the animation */
+  .helper--hero-text-gsap {
+    position: relative;
+
+    &:before {
+      position: relative;
+      top: 0rem;
+      left: 0rem;
+    }
+    &:after {
+      position: relative;
+      top: 0rem;
+      right: 0rem;
+    }
+
+    > * {
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
 }
 
 /**
