@@ -101,8 +101,8 @@ const AnimatedSectionHero = () => {
           delay: 1,
           onComplete() {
             const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
-            if (node) node.style.width = '';
-            node?.closest('h1')?.classList.toggle('helper--hero-text-gsap')
+            node.style.width = '';
+            node.closest('h1')?.classList.toggle('helper--hero-text-gsap')
           }
         }, '<')
         tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
