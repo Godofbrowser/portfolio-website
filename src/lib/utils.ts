@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const scrollToElement = (selector, duration = 1000) => {
+export const scrollToElement = (selector: string | HTMLElement | null, duration = 1000) => {
   const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
   if (!element) return;
 
@@ -14,11 +14,11 @@ export const scrollToElement = (selector, duration = 1000) => {
   const distance = targetPosition - startPosition;
   const startTime = performance.now();
 
-  const easeInOutQuad = (t) => {
+  const easeInOutQuad = (t: number) => {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   };
 
-  const animateScroll = (currentTime) => {
+  const animateScroll = (currentTime: number) => {
     const elapsedTime = currentTime - startTime;
     const progress = Math.min(elapsedTime / duration, 1);
     const easedProgress = easeInOutQuad(progress);

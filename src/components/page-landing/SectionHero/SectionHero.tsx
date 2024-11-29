@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {createElement, forwardRef, useRef} from "react";
+import React, {createElement, forwardRef, MutableRefObject, useRef} from "react";
 import {motion} from "framer-motion";
 import {person, platformLinks} from '@/constants'
 
@@ -13,10 +13,14 @@ import {scrollToElement} from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const SectionHero = forwardRef((_, ref) => {
-    const scroll = (e) => {
+interface SectionHeroProps {
+    ref?: MutableRefObject<HTMLDivElement | null>;
+}
+
+const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
+    const scroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
-        scrollToElement(e.currentTarget.attributes.href.value, 1000)
+        scrollToElement(e.currentTarget.getAttribute('href'), 1000)
     }
     return (
         <section id="hero"
@@ -76,16 +80,16 @@ const SectionHero = forwardRef((_, ref) => {
 SectionHero.displayName = 'SectionHero'
 
 const AnimatedSectionHero = () => {
-    const ref = useRef()
+    const ref = useRef<HTMLDivElement | null>(null)
     const timelineRef = useRef<gsap.core.Timeline>()
 
 
     useGSAP(() => {
-        if (!ref.current) return
-
         const primaryElement = ref.current
-        const sectionElement = primaryElement.closest('section')
-        const bgElement = sectionElement.querySelector('.bg-fixed')
+        if (primaryElement === null) return
+
+        const sectionElement = primaryElement.closest('section') as HTMLDivElement
+        const bgElement = sectionElement?.querySelector('.bg-fixed') as HTMLDivElement
 
         const timeline = timelineRef.current = gsap.timeline({
             scrollTrigger: {
