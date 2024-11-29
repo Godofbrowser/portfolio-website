@@ -73,7 +73,7 @@ const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
                         ))}
                     </ul>
                     <h1 className="helper--hero-text-gsap relative text-5xl sm:text-7xl md:text-6xl lg:text-8xl md:mt-6 font-bold leading-relaxed [grid-area:name] min-[365px]:highlighted-text">
-                      <AppSplitType className="user-full-name" text={person.userFullName} />
+                      <AppSplitType processKey={'user-full-name'} className="user-full-name" text={person.userFullName} />
                     </h1>
                     <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{person.userHeadline}</p>
                 </motion.div>
@@ -100,8 +100,8 @@ const AnimatedSectionHero = () => {
           duration: .3,
           delay: 1,
           onComplete() {
-            const node = primaryElement.querySelector('.user-full-name')
-            node.style.width = ''
+            const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
+            if (node) node.style.width = '';
             node?.closest('h1')?.classList.toggle('helper--hero-text-gsap')
           }
         }, '<')
@@ -117,8 +117,9 @@ const AnimatedSectionHero = () => {
         }, '<')
         tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
           color: '#f26140',
+          duration: .6,
           stagger: {
-            each: 0.03,
+            each: 0.06,
             from: 'center',
             ease: 'power4.inOut',
           }
@@ -128,7 +129,8 @@ const AnimatedSectionHero = () => {
           tl1.clear()
           tl1.kill()
           // This will reset the color to react with theme switching.
-          primaryElement.querySelectorAll('.user-full-name .char').forEach(e => (e.style.color = ''))
+          ;(primaryElement.querySelectorAll('.user-full-name .char') as NodeListOf<HTMLSpanElement>)
+              .forEach(e => (e.style.color = ''))
         })
         return () => tl1.kill()
       })()

@@ -23,7 +23,7 @@ export const useSplitType = (key?: string, whenSplittedCallback?: () => void) =>
                 resolver.current = undefined
             }
         }
-    }, [])
+    }, [key, whenSplittedCallback])
 
     return {
         splittedKeys,
