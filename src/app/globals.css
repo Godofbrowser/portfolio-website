@@ -115,7 +115,6 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
 
   .animated-scroll-down {
     animation: animated-scroll-down 1.5s ease-out;
-    animation-direction: reverse;
     animation-iteration-count: infinite;
   }
 
@@ -193,13 +192,14 @@ https://colorhunt.co/palette/0c0c0c481e149b3922f2613f
 }
 
 @keyframes animated-scroll-down {
-  0%, 10% {
-    transform: translateY(-10px) rotate(225deg);
-    opacity: 0;
+  0% {
+    transform: translateY(10px) rotate(225deg);
+    opacity: 1;
   }
 
-  20%, 80% {
-    opacity: 1;
+  50% {
+    transform: translateY(-10px) rotate(225deg);
+    opacity: 0;
   }
 
   100% {
