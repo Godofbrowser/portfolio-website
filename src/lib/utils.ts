@@ -5,6 +5,25 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export const throttle = <T extends (...args: any[]) => void>(
+    func: T,
+    limit: number
+): ((this: ThisParameterType<T>, ...args: Parameters<T>) => void) => {
+  let inThrottle = false;
+
+  return function (this: ThisParameterType<T>, ...args: Parameters<T>): void {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
+    }
+  };
+};
+
+
 export const scrollToElement = (selector: string | HTMLElement | null, duration = 1000) => {
   const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
   if (!element) return;

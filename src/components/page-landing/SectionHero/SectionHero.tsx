@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, {createElement, forwardRef, MutableRefObject, useCallback, useRef} from "react";
+import React, {createElement, forwardRef, MutableRefObject, useCallback, useEffect, useRef} from "react";
 import {motion} from "framer-motion";
 import {person, platformLinks} from '@/constants'
 
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {scrollToElement} from "@/lib/utils";
+import {scrollToElement, throttle} from "@/lib/utils";
 import { AppSplitType } from "@/components/ui/AppSplitType";
 import { useSplitType } from "@/hooks/useSplitType";
+import {useTheme} from "next-themes";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -45,37 +46,39 @@ const SectionHero = forwardRef<HTMLDivElement, SectionHeroProps>((_, ref) => {
             <div ref={ref}
                  className="relative z-50 grid grid-cols-1 gap-6 md:grid-cols-[repeat(2,max-content)] max-md:pt-20 md:gap-12 px-6">
                 <motion.div
-                    initial={{scale: 1.4, opacity: 0}}
-                    animate={{scale: 1, opacity: 1}}
-                    transition={{duration: 0.3, delay: 1, type: "spring", stiffness: 220, bounce: 0.5, mass: 1.2 }}
-                    className="size-32 sm:size-44 md:size-48 lg:size-56"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 0.3 }}
                 >
+                <div data-testid={'user-photo'} className="size-32 sm:size-44 md:size-48 lg:size-56">
                     <div className="overflow-hidden rounded-full size-full shadow-md bg-background">
                         <Image width={640} height={640} src={person.userPhoto} alt={person.userFullName} priority/>
                     </div>
+                </div>
                 </motion.div>
                 <motion.div
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
-                    transition={{duration: 0.5}}
-                    className="max-md:grid max-md:[grid-template-areas:'name'_'headline'_'links']"
+                    transition={{duration: 0.3}}
                 >
-                    {/* main section */}
-                    <ul className="*:inline-block *:ml-5 [grid-area:links] max-md:mt-3">
-                        {/* Links */}
-                        {platformLinks.map((pl) => (
-                            <li key={pl.label} className="first:ml-0">
-                                <Link href={pl.link} className="transition-colors duration-300 hover:text-accent"
-                                      aria-label={pl.label}>
-                                    {createElement(pl.icon[0] as any, {className: 'size-6', ...pl.icon[1]})}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <h1 className="helper--hero-text-gsap relative text-5xl sm:text-7xl md:text-6xl lg:text-8xl md:mt-6 font-bold leading-relaxed [grid-area:name] min-[365px]:highlighted-text">
-                      <AppSplitType processKey={'user-full-name'} className="user-full-name" text={person.userFullName} />
-                    </h1>
-                    <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{person.userHeadline}</p>
+                    <div className="max-md:grid max-md:[grid-template-areas:'name'_'headline'_'links']" data-testid={'user-main'}>
+                        {/* main section */}
+                        <ul className="*:inline-block *:ml-5 [grid-area:links] max-md:mt-3">
+                            {/* Links */}
+                            {platformLinks.map((pl) => (
+                                <li key={pl.label} className="first:ml-0">
+                                    <Link href={pl.link} className="transition-colors duration-300 hover:text-accent"
+                                          aria-label={pl.label}>
+                                        {createElement(pl.icon[0] as any, {className: 'size-6', ...pl.icon[1]})}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <h1 className="relative text-5xl sm:text-7xl md:text-6xl lg:text-8xl md:mt-6 font-bold leading-relaxed [grid-area:name] min-[365px]:highlighted-text">
+                            <AppSplitType processKey={'user-full-name'} className="user-full-name" text={person.userFullName} />
+                        </h1>
+                        <p className="text-xl mt-6 md:text-2xl [grid-area:headline]">{person.userHeadline}</p>
+                    </div>
                 </motion.div>
             </div>
         </section>
@@ -85,66 +88,98 @@ SectionHero.displayName = 'SectionHero'
 
 const AnimatedSectionHero = () => {
   const { contextSafe } = useGSAP();
+  const {theme} = useTheme()
 
-    const ref = useRef<HTMLDivElement | null>(null)
-    const timelineRef = useRef<gsap.core.Timeline>()
+    const primaryElementRef = useRef<HTMLDivElement | null>(null)
+    const scrollableTimelineRef = useRef<gsap.core.Timeline>()
+    const playableTimelineRef = useRef<gsap.core.Timeline>()
 
-    useSplitType('user-full-name', () => {
-      contextSafe(() => {
-        const primaryElement = ref.current
+    // Throttling cos the theme-change,and the split-completed will both race to invoke this
+    const playIntro = useRef(throttle(contextSafe(() => {
+        const primaryElement = primaryElementRef.current
         if (primaryElement === null) return
-  
-        const tl1 = gsap.timeline({ duration: .3, delay: 1, ease: 'power4.inOut', })
-        tl1.from(primaryElement.querySelector('.user-full-name'), {
-          width: 50,
-          duration: .3,
-          delay: 1,
-          onComplete() {
-            const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
-            node.style.width = '';
-            node.closest('h1')?.classList.toggle('helper--hero-text-gsap')
-          }
-        }, '<')
-        tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
-          // y: '50',
-          scale: 0.4,
-          opacity: 0,
-          stagger: {
-            each: 0.03,
-            from: 'center',
-            ease: 'power4.inOut',
-          }
-        }, '<')
-        tl1.from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
-          color: '#f26140',
-          duration: .6,
-          stagger: {
-            each: 0.06,
-            from: 'center',
-            ease: 'power4.inOut',
-          }
-        }, '-=0')
+        if (playableTimelineRef.current) {
+            playableTimelineRef.current.seek( '-=0', false );
+            playableTimelineRef.current.clear()
+            playableTimelineRef.current.kill()
+        }
 
-        tl1.eventCallback('onComplete', () => {
-          tl1.clear()
-          tl1.kill()
-          // This will reset the color to react with theme switching.
-          ;(primaryElement.querySelectorAll('.user-full-name .char') as NodeListOf<HTMLSpanElement>)
-              .forEach(e => (e.style.color = ''))
+        const timeline = playableTimelineRef.current = gsap.timeline({ duration: .3, delay: 1, ease: 'power4.inOut', })
+
+        // Apply the helper class before animation begins
+        const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
+        node.closest('h1')?.classList.add('helper--hero-text-gsap')
+
+        timeline
+            .from(primaryElement.querySelector('[data-testid=user-main]'), {
+                opacity: 0,
+                duration: .3,
+                delay: 0,
+            }, '<')
+            .from(primaryElement.querySelector('[data-testid=user-photo]'), {
+                scale: 1.2,
+                opacity: 0,
+                duration: .7,
+                delay: .6,
+                ease: 'bounce.out'
+            }, '<')
+            .from(primaryElement.querySelector('.user-full-name'), {
+                width: 10,
+                duration: .3,
+                delay: .6,
+                onComplete() {
+                    const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
+                    node.style.width = '';
+                    node.closest('h1')?.classList.remove('helper--hero-text-gsap')
+                }
+            }, '+=100%')
+            .from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
+                scale: 0.4,
+                opacity: 0,
+                stagger: {
+                    each: 0.03,
+                    from: 'center',
+                    ease: 'power4.inOut',
+                }
+            }, '<')
+            .from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
+                color: '#f26140',
+                duration: .6,
+                stagger: {
+                    each: 0.06,
+                    from: 'center',
+                    ease: 'power4.inOut',
+                },
+                onComplete() {
+                    // This will reset the color to react with theme switching.
+                    ;(primaryElement.querySelectorAll('.user-full-name .char') as NodeListOf<HTMLSpanElement>)
+                        .forEach(e => (e.style.color = ''))
+                }
+            }, '-=0')
+
+        timeline.eventCallback('onComplete', () => {
+            timeline.clear()
+            timeline.kill()
         })
-        return () => tl1.kill()
-      })()
-    })
+        return () => timeline.kill()
+    }), 600))
+
+    const {splittedKeys} = useSplitType('user-full-name', playIntro.current)
+    useEffect(() => {
+        if (splittedKeys.includes('user-full-name')) {
+            playIntro.current()
+        }
+    }, [theme, splittedKeys])
 
 
     useGSAP(() => {
-        const primaryElement = ref.current
+        const primaryElement = primaryElementRef.current
         if (primaryElement === null) return
 
         const sectionElement = primaryElement.closest('section') as HTMLDivElement
         const bgElement = sectionElement?.querySelector('.bg-fixed') as HTMLDivElement
 
-        const timeline = timelineRef.current = gsap.timeline({
+        const timeline = scrollableTimelineRef.current = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionElement,
                 start: `top top`,
@@ -189,7 +224,7 @@ const AnimatedSectionHero = () => {
     })
 
     return (
-        <SectionHero ref={ref} />
+        <SectionHero ref={primaryElementRef} />
     )
 }
 
