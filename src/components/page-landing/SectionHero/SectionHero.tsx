@@ -104,7 +104,7 @@ const AnimatedSectionHero = () => {
             playableTimelineRef.current.kill()
         }
 
-        const timeline = playableTimelineRef.current = gsap.timeline({ duration: .3, delay: 1, ease: 'power4.inOut', })
+        const timeline = playableTimelineRef.current = gsap.timeline({ duration: .6, delay: 1, ease: 'power4.inOut', })
 
         // Apply the helper class before animation begins
         const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
@@ -112,21 +112,20 @@ const AnimatedSectionHero = () => {
 
         timeline
             .from(primaryElement.querySelector('[data-testid=user-main]'), {
+                scale: 1.2,
                 opacity: 0,
-                duration: .3,
-                delay: 0,
+                duration: .4,
+                ease: 'bounce.out'
             }, '<')
             .from(primaryElement.querySelector('[data-testid=user-photo]'), {
                 scale: 1.2,
                 opacity: 0,
-                duration: .7,
-                delay: .6,
+                duration: .6,
                 ease: 'bounce.out'
-            }, '<')
+            }, '+=50%')
             .from(primaryElement.querySelector('.user-full-name'), {
                 width: 10,
-                duration: .3,
-                delay: .6,
+                duration: .25,
                 onComplete() {
                     const node = primaryElement.querySelector('.user-full-name') as HTMLSpanElement
                     node.style.width = '';
@@ -137,25 +136,22 @@ const AnimatedSectionHero = () => {
                 scale: 0.4,
                 opacity: 0,
                 stagger: {
-                    each: 0.03,
+                    each: 0.04,
                     from: 'center',
-                    ease: 'power4.inOut',
                 }
-            }, '<')
+            }, '-=25%')
             .from(gsap.utils.toArray(primaryElement.querySelectorAll('.user-full-name .char')), {
                 color: '#f26140',
-                duration: .6,
                 stagger: {
                     each: 0.06,
                     from: 'center',
-                    ease: 'power4.inOut',
                 },
                 onComplete() {
                     // This will reset the color to react with theme switching.
                     ;(primaryElement.querySelectorAll('.user-full-name .char') as NodeListOf<HTMLSpanElement>)
                         .forEach(e => (e.style.color = ''))
                 }
-            }, '-=0')
+            }, '-=25%')
 
         timeline.eventCallback('onComplete', () => {
             timeline.clear()
@@ -186,7 +182,6 @@ const AnimatedSectionHero = () => {
                 end: 'bottom top',
                 scrub: true,
                 snap: {snapTo: 1, inertia: false, delay: .6, duration: 1, ease: "sine.out"},
-                // markers: true,
             },
         })
 

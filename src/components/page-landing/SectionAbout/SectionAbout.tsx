@@ -46,7 +46,7 @@ const SectionAbout = forwardRef<HTMLDivElement, SectionAboutProps>((_, ref) => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 3 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
           layout
           className="text-center mb-12 transition-none"
         >

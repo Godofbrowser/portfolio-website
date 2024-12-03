@@ -58,8 +58,12 @@ export const experiences: IExperience[] = [
         "techTools": [
             "Ionic",
             "Angular",
+            "React",
             "Next.js",
-            "Prismic"
+            "Prismic.io",
+            "Typescript",
+            "Node.js",
+            "Firebase",
         ],
         "achievements": [
             "Conducted thorough code reviews to ensure code quality and adherence to best practices.",
