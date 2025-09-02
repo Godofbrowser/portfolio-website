@@ -3,14 +3,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 
 export function Footer () {
-    const currentYear = useMemo(() => new Date().getFullYear(), []);
-    const currentTime = useMemo(() => {
-        return new Date().toLocaleString("en-US", {
-            hour: "numeric",
-            minute: "numeric",
-            hour12: true,
-        });
-    }, []);
+    const currentYear = Math.max(2025, new Date().getFullYear());
     const footerLinks = useMemo(() => [
         { label: 'Articles', link: 'https://medium.com/@ejjay' },
         { label: 'Resume', link: 'https://docs.google.com/document/d/e/2PACX-1vRBaSJImuHYeHooFXol99o1oZa43QEuKFvJtqs8FofyIcpTnXnAYGt0cQQ5xkdwlA/pub' },
@@ -34,7 +27,7 @@ export function Footer () {
                 </a>{" "}
                 <span className="max-sm:hidden">|</span>{" "}
                 <span className="whitespace-nowrap max-sm:block">
-                  Don&apos;t hesitate to reach out. &#34;{currentTime}&#34;
+                  Don&apos;t hesitate to reach out.
                 </span>
               </p>
             </div>
