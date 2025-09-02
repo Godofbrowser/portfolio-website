@@ -17,8 +17,14 @@ const AppModeToggle = ({ className }: DarkModeBtnProps) => {
     const { theme, setTheme } = useTheme()
     const {trackEvent} = useAnalytics()
     const toggleHandler = useCallback(() => {
-        const nextTheme = theme == "dark" ? "light" : "dark"
-        setTheme(nextTheme)
+        if (theme === "system" || theme === undefined) {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const nextTheme = systemTheme === "dark" ? "light" : "dark";
+            setTheme(nextTheme);
+        } else {
+            const nextTheme = theme === "dark" ? "light" : "dark";
+            setTheme(nextTheme);
+        }
         trackEvent(EventName.ThemeModeToggled, { prev_theme: theme, next_theme: nextTheme })
     }, [theme, trackEvent, setTheme])
 
